@@ -449,16 +449,39 @@
 <p><img src="https://i.loli.net/2019/08/19/UpO7lIRYAzrq1yx.png" alt></p>
 <p>当然还可以选用PPA的方式安装最新版本的nodejs及npm.如果可能要使用多个版本的nodejs,则可安装nodejs的版本管理工具NVM．建议在通过这些方式安装前先使用<code>sudo apt remove</code>命令卸载掉已安装的nodejs及npm.</p>
 <p>不过如果只是使用hexo,建议按上面的方式安装就可以了．</p>
+<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>git是目前最常用的版本管理工具，主要由linus大神开发，在许多地方都会用到．</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
+
+<p>类似的用一下命令检查是否安装成功．</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2019/08/19/KCOuWSERazD9g2Q.png" alt></p>
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>在ubuntu19.04版本上，如果按照<a href="https://hexo.io" target="_blank" rel="noopener">官网</a>的指南,输入命名<code>npm install hexo-cli -g</code>,就会出现下面的报错．</p>
 <p><img src="https://i.loli.net/2019/08/19/jVm7tshG6eEroYu.png" alt></p>
 <p>这个主要是权限问题，加上<code>sudo</code>即可.即输入下面的命令</p>
 <figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>注：官方其实并不推荐这种做法，更好但也更复杂的方法可以参考<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方的指南</a></li>
+</ul>
 <p>安装时还是会有<code>WARN</code>,但并不影响hexo的安装，可输入下面的命令检查是否安装成功</p>
 <figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://i.loli.net/2019/08/19/ixmhkcnRyW74dJe.png" alt></p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h2 id="部署到Github-Pages"><a href="#部署到Github-Pages" class="headerlink" title="部署到Github Pages"></a>部署到Github Pages</h2><h3 id="github账号的申请"><a href="#github账号的申请" class="headerlink" title="github账号的申请"></a>github账号的申请</h3><h3 id="建立Github-Pages仓库"><a href="#建立Github-Pages仓库" class="headerlink" title="建立Ｇithub Pages仓库"></a>建立Ｇithub Pages仓库</h3><h3 id="设置ssh登录秘钥"><a href="#设置ssh登录秘钥" class="headerlink" title="设置ssh登录秘钥"></a>设置ssh登录秘钥</h3><h3 id="将本地的Hexo推送到github仓库"><a href="#将本地的Hexo推送到github仓库" class="headerlink" title="将本地的Ｈexo推送到github仓库"></a>将本地的Ｈexo推送到github仓库</h3><h2 id="Hexo的个性化设置"><a href="#Hexo的个性化设置" class="headerlink" title="Hexo的个性化设置"></a>Hexo的个性化设置</h2><h3 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Ｎext主题"></a>安装Ｎext主题</h3><h3 id="添加github-Fork-Me-丝带"><a href="#添加github-Fork-Me-丝带" class="headerlink" title="添加github Fork Me 丝带"></a>添加github Fork Me 丝带</h3><h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><h2 id="背后的工作原理初探"><a href="#背后的工作原理初探" class="headerlink" title="背后的工作原理初探"></a>背后的工作原理初探</h2><h3 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h3>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>安装好hexo后，我们可以先在本地测试一下，先创建一个文件夹用于测试：</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/<span class="built_in">test</span></span><br><span class="line"><span class="built_in">cd</span> ~/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
+<p>创建一个博客系统，并初始化</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>在本地测试运行效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>命令行的显示如下：</p>
+<p><img src="https://i.loli.net/2019/08/19/1iwTGdtrQoxeXUy.png" alt></p>
+<p>按住<code>Ctrl</code>键，点击<code>http://localhost:4000</code>,便会在浏览器中打开如下网页，便说明安装成功．</p>
+<p><img src="https://i.loli.net/2019/08/19/wZBvcy23HXIj4fM.png" alt></p>
+<h2 id="部署到Github-Pages"><a href="#部署到Github-Pages" class="headerlink" title="部署到Github Pages"></a>部署到Github Pages</h2><h3 id="github账号的申请"><a href="#github账号的申请" class="headerlink" title="github账号的申请"></a>github账号的申请</h3><h3 id="建立Github-Pages仓库"><a href="#建立Github-Pages仓库" class="headerlink" title="建立Ｇithub Pages仓库"></a>建立Ｇithub Pages仓库</h3><h3 id="设置ssh登录秘钥"><a href="#设置ssh登录秘钥" class="headerlink" title="设置ssh登录秘钥"></a>设置ssh登录秘钥</h3><h3 id="将本地的Hexo推送到github仓库"><a href="#将本地的Hexo推送到github仓库" class="headerlink" title="将本地的Ｈexo推送到github仓库"></a>将本地的Ｈexo推送到github仓库</h3><h2 id="Hexo的个性化设置"><a href="#Hexo的个性化设置" class="headerlink" title="Hexo的个性化设置"></a>Hexo的个性化设置</h2><h3 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Ｎext主题"></a>安装Ｎext主题</h3><h3 id="添加github-Fork-Me-丝带"><a href="#添加github-Fork-Me-丝带" class="headerlink" title="添加github Fork Me 丝带"></a>添加github Fork Me 丝带</h3><h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><h2 id="背后的工作原理初探"><a href="#背后的工作原理初探" class="headerlink" title="背后的工作原理初探"></a>背后的工作原理初探</h2><h3 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
           
         
       
