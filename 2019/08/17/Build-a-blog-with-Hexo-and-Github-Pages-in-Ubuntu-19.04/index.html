@@ -79,12 +79,10 @@
 
 
 
-<meta name="description" content="系统环境 Ubuntu 19.04 Node.js v10.16.3 npm 6.9.0 Git 2.20.1  本地安装安装相关工具－－Nodejs, npm及git安装Nodejs及npm．  使用Ctrl+Alt+T快键键打开终端,先同步软件仓库 1sudo apt update  接着，使用以下命令安装nodejs 1sudo apt install nodejs  最后，检查是否安装成">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在Ubuntu 19.04 环境下，使用Hexo加Github Pages搭建简洁的个人博客(1)">
 <meta property="og:url" content="http://yousite.com/2019/08/17/Build-a-blog-with-Hexo-and-Github-Pages-in-Ubuntu-19.04/index.html">
 <meta property="og:site_name" content="Ryviuszero">
-<meta property="og:description" content="系统环境 Ubuntu 19.04 Node.js v10.16.3 npm 6.9.0 Git 2.20.1  本地安装安装相关工具－－Nodejs, npm及git安装Nodejs及npm．  使用Ctrl+Alt+T快键键打开终端,先同步软件仓库 1sudo apt update  接着，使用以下命令安装nodejs 1sudo apt install nodejs  最后，检查是否安装成">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/08/18/fLGDlUiYqtQ1HkI.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/08/19/PLbryA32Rn7goTj.png">
@@ -101,10 +99,11 @@
 <meta property="og:image" content="https://i.loli.net/2019/08/19/OWyPFJSH3GsLEgl.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/19/EQbhT3tXMg1Bdx8.png">
 <meta property="og:image" content="https://i.loli.net/2019/08/19/AzPEXVFZOWgMdG7.png">
-<meta property="og:updated_time" content="2019-08-19T09:36:08.813Z">
+<meta property="og:image" content="https://i.loli.net/2019/08/19/jsl3aSm6GePE4Zc.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/19/Colkdw1jqWXa3zR.png">
+<meta property="og:updated_time" content="2019-08-19T14:15:17.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Ubuntu 19.04 环境下，使用Hexo加Github Pages搭建简洁的个人博客(1)">
-<meta name="twitter:description" content="系统环境 Ubuntu 19.04 Node.js v10.16.3 npm 6.9.0 Git 2.20.1  本地安装安装相关工具－－Nodejs, npm及git安装Nodejs及npm．  使用Ctrl+Alt+T快键键打开终端,先同步软件仓库 1sudo apt update  接着，使用以下命令安装nodejs 1sudo apt install nodejs  最后，检查是否安装成">
 <meta name="twitter:image" content="https://i.loli.net/2019/08/18/fLGDlUiYqtQ1HkI.jpg">
 
 
@@ -320,6 +319,8 @@
 
       
         <p><img src="https://i.loli.net/2019/08/18/fLGDlUiYqtQ1HkI.jpg" alt></p>
+<a id="more"></a>
+
 <h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><ul>
 <li>Ubuntu 19.04</li>
 <li>Node.js v10.16.3</li>
@@ -400,7 +401,31 @@
 
 <p>如果显示与下面类似，就说明设置成功了．</p>
 <p><img src="https://i.loli.net/2019/08/19/AzPEXVFZOWgMdG7.png" alt></p>
-<h3 id="将本地的Hexo推送到github仓库"><a href="#将本地的Hexo推送到github仓库" class="headerlink" title="将本地的Ｈexo推送到github仓库"></a>将本地的Ｈexo推送到github仓库</h3><h2 id="Hexo的个性化设置"><a href="#Hexo的个性化设置" class="headerlink" title="Hexo的个性化设置"></a>Hexo的个性化设置</h2><h3 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Ｎext主题"></a>安装Ｎext主题</h3><h3 id="添加github-Fork-Me-丝带"><a href="#添加github-Fork-Me-丝带" class="headerlink" title="添加github Fork Me 丝带"></a>添加github Fork Me 丝带</h3><h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><h2 id="背后的工作原理初探"><a href="#背后的工作原理初探" class="headerlink" title="背后的工作原理初探"></a>背后的工作原理初探</h2><h3 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="将本地的Hexo博客内容推送到github仓库"><a href="#将本地的Hexo博客内容推送到github仓库" class="headerlink" title="将本地的Ｈexo博客内容推送到github仓库"></a>将本地的Ｈexo博客内容推送到github仓库</h3><p>当准备正式建立博客站时，需要建立一个正式的文件夹来放正式的blog相关的内容，步骤和测试时一样．</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/myBlog</span><br><span class="line"><span class="built_in">cd</span> ~/myBlog</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>同样采用下面的三个命令测试是否安装成功</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>接着找到blog目录下的<code>_config.yml</code>文件．修改<code>deploy</code>相关内容．<br><img src="https://i.loli.net/2019/08/19/jsl3aSm6GePE4Zc.png" alt></p>
+<p>repository改一下对应的用户名．type对应git, branch 对应master,这里有两个坑需要注意一下．一个是常见的分号<code>:</code>需要为英文状态下的分号<code>:</code>．第二个是<code>:</code>后面要跟一个空格，这个是yaml文件格式的要求．</p>
+<p>修改完成后保存．接着在blog目录下使用<code>hexo d</code>命令，一般会要求输入github的用户名和密码．如果没有任何反应或是报错，可以先安装<code>hexo-deployer-git</code>后</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>再次推送到github试试．</p>
+<h2 id="Hexo的个性化设置"><a href="#Hexo的个性化设置" class="headerlink" title="Hexo的个性化设置"></a>Hexo的个性化设置</h2><p>经过上面的步骤基本就完成了一个博客的搭建．在本地可以通过<code>hexo new &quot;article_name&quot;</code>新建文章，然后再在blog目录下的<code>source/_posts</code>目录中编辑对应文章的markdown文档，然后再<code>hexo clean &amp;&amp;hexo g</code>生成对应的静态文件．<code>hexo s</code>本地预览．<code>hexo d</code>推送到网站上．这样所有的人就可以通过<code>youname.github.io</code>看到你的文章了（一般其实也就你自己看：）</p>
+<p>简洁，方便．使人将更多的精力放在写作本身上．当然一段时间后，你想稍稍个性化一下自己的博客，使之看起来像是一个实实在在的个人博客，而不是hexo的一个官方demo.下面是一些常用的个性化设置.</p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>Hexo官方的主题是landscape, 如果想换一下其他主题可以到hexo的官方主题板块去看一看，这里以比较流行的Next主题为例(<a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/INSTALLATION.md" target="_blank" rel="noopener">官方github链接</a>),</p>
+<p>首先<code>cd</code>到blog目录下．然后用下面的命令将主题文件clone到本地</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>接着修改<code>_config.yaml</code>中的<code>theme</code>修改为<code>next</code>即可．</p>
+<h3 id="添加github-Fork-Me-丝带或Github-Corners"><a href="#添加github-Fork-Me-丝带或Github-Corners" class="headerlink" title="添加github Fork Me 丝带或Github Corners"></a>添加github Fork Me 丝带或Github Corners</h3><p>github丝带的项目在<a href="https://github.blog/2008-12-19-github-ribbons/" target="_blank" rel="noopener">GitHub Ribbons</a>这篇文章中，github　Corners的项目在<a href="http://tholman.com/github-corners/" target="_blank" rel="noopener">GitHub Corners</a>这篇文章中．只要复制一个自己喜欢的样式代码．然后改一下里面的站点地址，再复制到<code>theme/&quot;正在使用的主题&quot;/layout/_layout.swig</code>对应的地方即可．具体位置如下所示：</p>
+<p><img src="https://i.loli.net/2019/08/19/Colkdw1jqWXa3zR.png" alt></p>
+<h2 id="背后的工作原理初探"><a href="#背后的工作原理初探" class="headerlink" title="背后的工作原理初探"></a>背后的工作原理初探</h2><p>…</p>
+<h3 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h3><p><a href="https://github.com/HarleyWang93/blog/issues/1#" target="_blank" rel="noopener">Hexo + GitHub (Coding) Pages 搭建博客</a> </p>
+<p><a href="https://godweiyang.com/2018/04/13/hexo-blog/" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a></p>
+
       
     </div>
     
@@ -420,26 +445,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/08/17/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/17/article-title/" rel="prev" title="article title">
-                article title <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
 
       
@@ -513,7 +518,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -550,7 +555,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统环境"><span class="nav-number">1.</span> <span class="nav-text">系统环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地安装"><span class="nav-number">2.</span> <span class="nav-text">本地安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装相关工具－－Nodejs-npm及git"><span class="nav-number">2.1.</span> <span class="nav-text">安装相关工具－－Nodejs, npm及git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Nodejs及npm．"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装Nodejs及npm．</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装git"><span class="nav-number">2.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试"><span class="nav-number">2.4.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到Github-Pages"><span class="nav-number">3.</span> <span class="nav-text">部署到Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#github账号的申请"><span class="nav-number">3.1.</span> <span class="nav-text">github账号的申请</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立Github-Pages仓库"><span class="nav-number">3.2.</span> <span class="nav-text">建立Ｇithub Pages仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置ssh登录秘钥"><span class="nav-number">3.3.</span> <span class="nav-text">设置ssh登录秘钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地生成公钥秘钥"><span class="nav-number">3.4.</span> <span class="nav-text">本地生成公钥秘钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将本地的Hexo推送到github仓库"><span class="nav-number">3.5.</span> <span class="nav-text">将本地的Ｈexo推送到github仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo的个性化设置"><span class="nav-number">4.</span> <span class="nav-text">Hexo的个性化设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Next主题"><span class="nav-number">4.1.</span> <span class="nav-text">安装Ｎext主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加github-Fork-Me-丝带"><span class="nav-number">4.2.</span> <span class="nav-text">添加github Fork Me 丝带</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绑定域名"><span class="nav-number">4.3.</span> <span class="nav-text">绑定域名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背后的工作原理初探"><span class="nav-number">5.</span> <span class="nav-text">背后的工作原理初探</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐阅读"><span class="nav-number">5.1.</span> <span class="nav-text">推荐阅读</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统环境"><span class="nav-number">1.</span> <span class="nav-text">系统环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地安装"><span class="nav-number">2.</span> <span class="nav-text">本地安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装相关工具－－Nodejs-npm及git"><span class="nav-number">2.1.</span> <span class="nav-text">安装相关工具－－Nodejs, npm及git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Nodejs及npm．"><span class="nav-number">2.1.1.</span> <span class="nav-text">安装Nodejs及npm．</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装git"><span class="nav-number">2.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试"><span class="nav-number">2.4.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到Github-Pages"><span class="nav-number">3.</span> <span class="nav-text">部署到Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#github账号的申请"><span class="nav-number">3.1.</span> <span class="nav-text">github账号的申请</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立Github-Pages仓库"><span class="nav-number">3.2.</span> <span class="nav-text">建立Ｇithub Pages仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置ssh登录秘钥"><span class="nav-number">3.3.</span> <span class="nav-text">设置ssh登录秘钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地生成公钥秘钥"><span class="nav-number">3.4.</span> <span class="nav-text">本地生成公钥秘钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将本地的Hexo博客内容推送到github仓库"><span class="nav-number">3.5.</span> <span class="nav-text">将本地的Ｈexo博客内容推送到github仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo的个性化设置"><span class="nav-number">4.</span> <span class="nav-text">Hexo的个性化设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装主题"><span class="nav-number">4.1.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加github-Fork-Me-丝带或Github-Corners"><span class="nav-number">4.2.</span> <span class="nav-text">添加github Fork Me 丝带或Github Corners</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背后的工作原理初探"><span class="nav-number">5.</span> <span class="nav-text">背后的工作原理初探</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐阅读"><span class="nav-number">5.1.</span> <span class="nav-text">推荐阅读</span></a></li></ol></li></ol></div>
             
 
           </div>
