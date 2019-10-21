@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ryviuszero">
-<meta property="og:url" content="http://yousite.com/index.html">
+<meta name="description" content="简介​    只有需要排序的对象具有一定的序（满足 非对称性 ，可传递性，完备性），就可以进行排序。为了专注于算法本身，下面的算法以整数数组为对象，实现排序。其中冒泡排序，选择排序的基本思想都比较简单，但时间复杂度较高，插入排序有点类似与选择排序，但实际的运行会快一点。堆排序中使用的堆的数据结构，是优先队列实现的基础。归并排序可以达到排序算法理论上的最佳性能，但现实生活中需要排序的对象一般都是部分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构之排序算法总结">
+<meta property="og:url" content="http://yousite.com/2019/09/21/数据结构之排序算法总结/index.html">
 <meta property="og:site_name" content="Ryviuszero">
+<meta property="og:description" content="简介​    只有需要排序的对象具有一定的序（满足 非对称性 ，可传递性，完备性），就可以进行排序。为了专注于算法本身，下面的算法以整数数组为对象，实现排序。其中冒泡排序，选择排序的基本思想都比较简单，但时间复杂度较高，插入排序有点类似与选择排序，但实际的运行会快一点。堆排序中使用的堆的数据结构，是优先队列实现的基础。归并排序可以达到排序算法理论上的最佳性能，但现实生活中需要排序的对象一般都是部分">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-21T15:04:29.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ryviuszero">
+<meta name="twitter:title" content="数据结构之排序算法总结">
+<meta name="twitter:description" content="简介​    只有需要排序的对象具有一定的序（满足 非对称性 ，可传递性，完备性），就可以进行排序。为了专注于算法本身，下面的算法以整数数组为对象，实现排序。其中冒泡排序，选择排序的基本思想都比较简单，但时间复杂度较高，插入排序有点类似与选择排序，但实际的运行会快一点。堆排序中使用的堆的数据结构，是优先队列实现的基础。归并排序可以达到排序算法理论上的最佳性能，但现实生活中需要排序的对象一般都是部分">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yousite.com/">
+  <link rel="canonical" href="http://yousite.com/2019/09/21/数据结构之排序算法总结/">
 
 
 
 
 
-  <title>Ryviuszero</title>
+  <title>数据结构之排序算法总结 | Ryviuszero</title>
   
 
 
@@ -141,8 +145,7 @@
   
 
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <a href="https://github.com/ryviuszero" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -218,9 +221,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -250,9 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/21/数据结构之排序算法总结/" itemprop="url">数据结构之排序算法总结</a></h1>
+          <h1 class="post-title" itemprop="name headline">数据结构之排序算法总结</h1>
         
 
         <div class="post-meta">
@@ -302,9 +303,7 @@
       
 
       
-        
-          
-            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>​    只有需要排序的对象具有一定的序（满足 非对称性 ，可传递性，完备性），就可以进行排序。为了专注于算法本身，下面的算法以整数数组为对象，实现排序。其中冒泡排序，选择排序的基本思想都比较简单，但时间复杂度较高，插入排序有点类似与选择排序，但实际的运行会快一点。堆排序中使用的堆的数据结构，是优先队列实现的基础。归并排序可以达到排序算法理论上的最佳性能，但现实生活中需要排序的对象一般都是部分有序的，所以快排的实际性能会好于归并排序，归并排序可以通过当归并的数组较短时，使用插入排序来优化性能。而快排为了避免最差性能O(n^2)的出现,可以先打乱一下组数，以达到平均的性能。</p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>​    只有需要排序的对象具有一定的序（满足 非对称性 ，可传递性，完备性），就可以进行排序。为了专注于算法本身，下面的算法以整数数组为对象，实现排序。其中冒泡排序，选择排序的基本思想都比较简单，但时间复杂度较高，插入排序有点类似与选择排序，但实际的运行会快一点。堆排序中使用的堆的数据结构，是优先队列实现的基础。归并排序可以达到排序算法理论上的最佳性能，但现实生活中需要排序的对象一般都是部分有序的，所以快排的实际性能会好于归并排序，归并排序可以通过当归并的数组较短时，使用插入排序来优化性能。而快排为了避免最差性能O(n^2)的出现,可以先打乱一下组数，以达到平均的性能。</p>
 <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>​    从头到尾，比较相邻的两个元素，通过交换位置，将较大的不断后移。是一种减而治之的思想的运用，每次冒泡完成，问题的规模就会减一，下面是实现代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (arr == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> n = arr.length;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                swap(arr, j, j + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp = arr[a];</span><br><span class="line">    arr[a] = arr[b];</span><br><span class="line">    arr[b] = tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -329,8 +328,6 @@
 <li><a href="https://algs4.cs.princeton.edu/21elementary/" target="_blank" rel="noopener">普林斯顿《Algorthms》 书中对排序的讲解</a></li>
 </ol>
 
-          
-        
       
     </div>
     
@@ -347,136 +344,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yousite.com/2019/08/17/Build-a-blog-with-Hexo-and-Github-Pages-in-Ubuntu-19.04/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ryviuszero">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ryviuszero">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/17/Build-a-blog-with-Hexo-and-Github-Pages-in-Ubuntu-19.04/" itemprop="url">在Ubuntu 19.04 环境下，使用Hexo加Github Pages搭建简洁的个人博客(1)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-17T16:53:37+08:00">
-                2019-08-17
-              </time>
+              <a href="/2019/08/17/Build-a-blog-with-Hexo-and-Github-Pages-in-Ubuntu-19.04/" rel="next" title="在Ubuntu 19.04 环境下，使用Hexo加Github Pages搭建简洁的个人博客(1)">
+                <i class="fa fa-chevron-left"></i> 在Ubuntu 19.04 环境下，使用Hexo加Github Pages搭建简洁的个人博客(1)
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p><img src="https://i.loli.net/2019/08/18/fLGDlUiYqtQ1HkI.jpg" alt></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/17/Build-a-blog-with-Hexo-and-Github-Pages-in-Ubuntu-19.04/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -486,10 +375,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -497,6 +387,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -517,8 +411,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -560,6 +463,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">2.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-number">3.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">4.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">5.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆排序"><span class="nav-number">6.</span> <span class="nav-text">堆排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">7.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的排序算法"><span class="nav-number">8.</span> <span class="nav-text">Java中的排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐阅读："><span class="nav-number">9.</span> <span class="nav-text">推荐阅读：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -700,6 +619,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
