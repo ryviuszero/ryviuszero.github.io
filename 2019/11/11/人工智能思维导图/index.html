@@ -79,21 +79,16 @@
 
 
 
-<meta name="description" content="简介">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FastAi 主题模型学习笔记">
-<meta property="og:url" content="http://yousite.com/2019/09/27/FastAi-主题模型学习笔记/index.html">
+<meta property="og:title" content="人工智能思维导图">
+<meta property="og:url" content="http://yousite.com/2019/11/11/人工智能思维导图/index.html">
 <meta property="og:site_name" content="Ryviuszero">
-<meta property="og:description" content="简介">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=c690d729abec8a13101a50e2c7019157/5ab5c9ea15ce36d3448570f638f33a87e850b177.jpg">
-<meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/d15231909526bd3ce99442f0b10ef9793d281d98">
-<meta property="og:image" content="https://ask.qcloudimg.com/http-save/yehe-2770378/enso1qaoae.png?imageView2/2/w/1620">
-<meta property="og:updated_time" content="2019-10-27T04:34:08.845Z">
+<meta property="og:image" content="https://i.loli.net/2019/11/11/L6AjtVwqK7orh4y.png">
+<meta property="og:updated_time" content="2019-11-11T14:56:30.894Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FastAi 主题模型学习笔记">
-<meta name="twitter:description" content="简介">
-<meta name="twitter:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=c690d729abec8a13101a50e2c7019157/5ab5c9ea15ce36d3448570f638f33a87e850b177.jpg">
+<meta name="twitter:title" content="人工智能思维导图">
+<meta name="twitter:image" content="https://i.loli.net/2019/11/11/L6AjtVwqK7orh4y.png">
 
 
 
@@ -123,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yousite.com/2019/09/27/FastAi-主题模型学习笔记/">
+  <link rel="canonical" href="http://yousite.com/2019/11/11/人工智能思维导图/">
 
 
 
 
 
-  <title>FastAi 主题模型学习笔记 | Ryviuszero</title>
+  <title>人工智能思维导图 | Ryviuszero</title>
   
 
 
@@ -240,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yousite.com/2019/09/27/FastAi-主题模型学习笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yousite.com/2019/11/11/人工智能思维导图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ryviuszero">
@@ -257,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">FastAi 主题模型学习笔记</h1>
+          <h1 class="post-title" itemprop="name headline">人工智能思维导图</h1>
         
 
         <div class="post-meta">
@@ -269,8 +264,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-27T12:32:44+08:00">
-                2019-09-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-11T22:55:43+08:00">
+                2019-11-11
               </time>
             
 
@@ -307,26 +302,9 @@
       
 
       
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><a id="more"></a>
+        <a id="more"></a>
 
-<h2 id="停词，词干提取和词性还原"><a href="#停词，词干提取和词性还原" class="headerlink" title="停词，词干提取和词性还原"></a>停词，词干提取和词性还原</h2><p>​    停词（Stop words)是在文段中经常出现，当又不能显示出改文段与其他文段区别的词，一般会将其忽略．常用的包含停词表库有NLTK,spacy等，中文的可以在这个github仓库找到：<a href="https://github.com/goto456/stopwords．中文在分词上还有一个比较火的库叫:[结巴分词](https://github.com/fxsjy/jieba)" target="_blank" rel="noopener">https://github.com/goto456/stopwords．中文在分词上还有一个比较火的库叫:[结巴分词](https://github.com/fxsjy/jieba)</a></p>
-<p>​    词干提取(Stemming)和词性还原(Lemmatization)都是生成词根的方法，简单来说，词干提取就是通过去除前后缀来得到词干，而词性还原则是基于语法规则(或者说是词典)．实际运用的词干提取算法有<a href="https://snowballstem.org/" target="_blank" rel="noopener">Snowball</a>,<a href="https://www.nltk.org/_modules/nltk/stem/lancaster.html" target="_blank" rel="noopener">Lancaster</a>．对于词性还原,在NLTK中使用的是wordNet.另外说一句，中文不需要进行词干提取和词性还原．</p>
-<h2 id="文档矩阵"><a href="#文档矩阵" class="headerlink" title="文档矩阵"></a>文档矩阵</h2><p>​    首先原始数据是一行的文本，target是多个标签．将所有的文本组成一个文本库，将文本中每个单词编号，得到一个字典，然后在统计每个文段中各个词出现的评论，便将一段文本转化为一个词频向量．</p>
-<h2 id="TF-IDF（词频-逆文件频率）"><a href="#TF-IDF（词频-逆文件频率）" class="headerlink" title="TF-IDF（词频-逆文件频率）"></a>TF-IDF（词频-逆文件频率）</h2><p>​        如果一个词在所有的文段中都出现了，那么它就不太能代表这个文段的特点，如果一个词只在特定的文段出现，那么它就代表着这个文段的特点．</p>
-<p>​    TF(term frequency) 表示一个词在文档中出现的频率：</p>
-<p><img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=c690d729abec8a13101a50e2c7019157/5ab5c9ea15ce36d3448570f638f33a87e850b177.jpg" alt="img"></p>
-<p>​    IDF(inverse document frequency)是对单词提供多少信息的一种度量，等于log(语料库中文档的数量/术语出现过的文档的数量)．公式：</p>
-<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d15231909526bd3ce99442f0b10ef9793d281d98" alt="{\ displaystyle {\ begin {aligned} \ mathrm {idf}＆=-\ log P（t | D）\\＆= \ log {\ frac {1} {P（t | D）}} \\＆= \ log {\ frac {N} {| \ {d \ in D：t \ in d \} |}} \ end {aligned}}}"></p>
-<p>tfidf(t, d, D) = tf(t, d) *idf(t,D).详细解析可参考:<a href="[https://en.wikipedia.org/wiki/Tf%E2%80%93idf](https://en.wikipedia.org/wiki/Tf–idf)">TF-idf</a></p>
-<h2 id="SVD-奇异值分解"><a href="#SVD-奇异值分解" class="headerlink" title="SVD(奇异值分解)"></a>SVD(奇异值分解)</h2><p>​    奇异值分解(Singular Value Decompoaition, SVD)就是将一个矩阵分解成两个<a href="https://en.wikipedia.org/wiki/Unitary_matrix" target="_blank" rel="noopener">酉矩阵</a>（性质:A * A.T = eye)和一个对角阵，公式如下：</p>
-<p>​                    <em>A</em>=<em>U</em>ΣV.T</p>
-<p>​    SVD的作用：降维．因为在上述得到的矩阵维度高，十分稀疏．并且SVD 也可以得到协方差矩阵X.T * X 最大的 d 个特征向量张成的矩阵即：V,它可以用于主成分分词（PCA).</p>
-<p>推荐阅读:</p>
-<p>[We Recommend a Singular Value Decomposition](We Recommend a Singular Value Decomposition)</p>
-<p><a href="https://cloud.tencent.com/developer/article/1346548" target="_blank" rel="noopener">用 LDA 和 LSA 两种方法来降维和做 Topic 建模</a></p>
-<h2 id="NMF-非负矩阵分解"><a href="#NMF-非负矩阵分解" class="headerlink" title="NMF(非负矩阵分解)"></a>NMF(非负矩阵分解)</h2><p>​    非负矩阵分解（Non-negative matrix factorization,简称NMF)也是一种矩阵分解方法，只不过是把原矩阵分解成两个矩阵．即：V = W H,W,H的值都非负．对W,H 的解释如下：</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-2770378/enso1qaoae.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="Truncated-SVD-Randomized-SVD-截断SVD-和随机SVD"><a href="#Truncated-SVD-Randomized-SVD-截断SVD-和随机SVD" class="headerlink" title="Truncated SVD, Randomized SVD(截断SVD 和随机ＳＶＤ)"></a>Truncated SVD, Randomized SVD(截断SVD 和随机ＳＶＤ)</h2><p>​    在SVD中是Am<em>n = Um <em>n * Σn</em>m</em> U(n*m).T,而在Truncated SVD,中则将右边的n换成了k,即只计算我们关注的k个topic,这样可以大大加快计算速度．Randomized SVD也是对SVD的一种优化，即保证结果差别不大的情况下，对速度和内存进行优化．</p>
+<p><img src="https://i.loli.net/2019/11/11/L6AjtVwqK7orh4y.png" alt></p>
 
       
     </div>
@@ -351,8 +329,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/25/NLP入门/" rel="next" title="NLP入门">
-                <i class="fa fa-chevron-left"></i> NLP入门
+              <a href="/2019/10/23/Leetcode排序相关题目总结/" rel="next" title="Leetcode排序相关题目总结">
+                <i class="fa fa-chevron-left"></i> Leetcode排序相关题目总结
               </a>
             
           </div>
@@ -360,10 +338,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/10/01/递归总结/" rel="prev" title="递归总结">
-                递归总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -415,17 +389,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -467,22 +432,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#停词，词干提取和词性还原"><span class="nav-number">2.</span> <span class="nav-text">停词，词干提取和词性还原</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档矩阵"><span class="nav-number">3.</span> <span class="nav-text">文档矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TF-IDF（词频-逆文件频率）"><span class="nav-number">4.</span> <span class="nav-text">TF-IDF（词频-逆文件频率）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SVD-奇异值分解"><span class="nav-number">5.</span> <span class="nav-text">SVD(奇异值分解)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NMF-非负矩阵分解"><span class="nav-number">6.</span> <span class="nav-text">NMF(非负矩阵分解)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Truncated-SVD-Randomized-SVD-截断SVD-和随机SVD"><span class="nav-number">7.</span> <span class="nav-text">Truncated SVD, Randomized SVD(截断SVD 和随机ＳＶＤ)</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
