@@ -90,8 +90,11 @@
 <meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/%~S%5D%60J7IZL_@CRE0$A8%7D9C7.png">
 <meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/backwash.jpg">
 <meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/95.png">
-<meta property="og:image" content="c:%5CUsers%5Cmywin%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200522191735038.png">
-<meta property="og:updated_time" content="2020-05-22T11:37:02.652Z">
+<meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/image-20200522191735038.png">
+<meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/logo_q.png">
+<meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/cou_a_score.png">
+<meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/q_100.png">
+<meta property="og:updated_time" content="2020-05-25T14:41:24.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Coursera:Algorithms I课后题解">
 <meta name="twitter:description" content="Coursera”Algorithms I”课后题解1. Percolation">
@@ -324,8 +327,15 @@
 <p><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/backwash.jpg" alt></p>
 <p>​    造成这个问题的原因主要是虚拟节点的设置导致的，这个问题可以通过两个uf解决。调试到最后如果用WeightedQuickUnionUF.connected方法，可以达到100%的正确率，但是connected是WeightedQuickUnionUF的一个deprecated方法，所以会扣5分，最后得到95分，如果采用两个find方法代替，则会出现方法调用过多的报错，最终得分98分。具体截图如下：</p>
 <p><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/95.png" alt></p>
-<p><img src="C:%5CUsers%5Cmywin%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200522191735038.png" alt="image-20200522191735038"></p>
-<h2 id="2-Queue"><a href="#2-Queue" class="headerlink" title="2.Queue"></a>2.Queue</h2><p>​    </p>
+<p><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/image-20200522191735038.png" alt></p>
+<h2 id="2-Queue"><a href="#2-Queue" class="headerlink" title="2.Queue"></a>2.Queue</h2><p><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/logo_q.png" alt></p>
+<h3 id="题目说明-1"><a href="#题目说明-1" class="headerlink" title="题目说明"></a>题目说明</h3><p>​    题目说明页面：<a href="https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php" target="_blank" rel="noopener">https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php</a></p>
+<p>​    实现一个双端队列和随机队列，这个作业的重点不在实现上，而是练习泛型和迭代器的写法。</p>
+<p>​    双向队列的操作都是在首部和尾部，所以实现我选的是基于双向链表，而随机队列的实质是没事随机取出容器的一个元素，需要频繁的get(i)操作，所以我选的是基于数组实现。</p>
+<p>​    另外还有一个要实现的类为排列（Permutation）,相当是随机队列的一个运用。经过初步调试取得了94分的成绩。</p>
+<p>​    <img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/cou_a_score.png" alt></p>
+<p>思路基本没有问题，但调试到100分，我还是用了一个下午，错误倒是比较好改正，主要是memory那一块，我刚开始看output的时候一直以为是RandomizedQueue的问题，结果，就算调到了99分最后的仍然有9个memory的测试过不了，我和大神写的代码一一的对，甚至都快抄过来了，可是还是对不了，逻辑分析也不通。最后一个偶然的机会才发现其实是过不了的是Deque的测试，我用了一个dummnyhead和一个全局变量k,结果就卡住了，最后去掉了两个变量，改用一个局部变量代替，调试调试就过了。</p>
+<p><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/q_100.png" alt></p>
 
       
     </div>
@@ -472,7 +482,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Coursera”Algorithms-I”课后题解"><span class="nav-number">1.</span> <span class="nav-text">Coursera”Algorithms I”课后题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Percolation"><span class="nav-number">1.1.</span> <span class="nav-text">1. Percolation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目说明"><span class="nav-number">1.1.1.</span> <span class="nav-text">题目说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路分享"><span class="nav-number">1.1.2.</span> <span class="nav-text">思路分享</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Queue"><span class="nav-number">1.2.</span> <span class="nav-text">2.Queue</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Coursera”Algorithms-I”课后题解"><span class="nav-number">1.</span> <span class="nav-text">Coursera”Algorithms I”课后题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Percolation"><span class="nav-number">1.1.</span> <span class="nav-text">1. Percolation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目说明"><span class="nav-number">1.1.1.</span> <span class="nav-text">题目说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路分享"><span class="nav-number">1.1.2.</span> <span class="nav-text">思路分享</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Queue"><span class="nav-number">1.2.</span> <span class="nav-text">2.Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目说明-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">题目说明</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
