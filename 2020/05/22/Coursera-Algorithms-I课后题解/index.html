@@ -94,7 +94,8 @@
 <meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/logo_q.png">
 <meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/cou_a_score.png">
 <meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/q_100.png">
-<meta property="og:updated_time" content="2020-05-25T14:41:24.524Z">
+<meta property="og:image" content="c:%5CUsers%5Cmywin%5CDesktop%5Chexo_pic%5Clogo_c.png">
+<meta property="og:updated_time" content="2020-06-06T05:29:43.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Coursera:Algorithms I课后题解">
 <meta name="twitter:description" content="Coursera”Algorithms I”课后题解1. Percolation">
@@ -331,11 +332,20 @@
 <h2 id="2-Queue"><a href="#2-Queue" class="headerlink" title="2.Queue"></a>2.Queue</h2><p><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/logo_q.png" alt></p>
 <h3 id="题目说明-1"><a href="#题目说明-1" class="headerlink" title="题目说明"></a>题目说明</h3><p>​    题目说明页面：<a href="https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php" target="_blank" rel="noopener">https://coursera.cs.princeton.edu/algs4/assignments/queues/specification.php</a></p>
 <p>​    实现一个双端队列和随机队列，这个作业的重点不在实现上，而是练习泛型和迭代器的写法。</p>
-<p>​    双向队列的操作都是在首部和尾部，所以实现我选的是基于双向链表，而随机队列的实质是没事随机取出容器的一个元素，需要频繁的get(i)操作，所以我选的是基于数组实现。</p>
+<h3 id="思路分享-1"><a href="#思路分享-1" class="headerlink" title="思路分享"></a>思路分享</h3><p>​    双向队列的操作都是在首部和尾部，所以实现我选的是基于双向链表，而随机队列的实质是没事随机取出容器的一个元素，需要频繁的get(i)操作，所以我选的是基于数组实现。</p>
 <p>​    另外还有一个要实现的类为排列（Permutation）,相当是随机队列的一个运用。经过初步调试取得了94分的成绩。</p>
 <p>​    <img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/cou_a_score.png" alt></p>
 <p>思路基本没有问题，但调试到100分，我还是用了一个下午，错误倒是比较好改正，主要是memory那一块，我刚开始看output的时候一直以为是RandomizedQueue的问题，结果，就算调到了99分最后的仍然有9个memory的测试过不了，我和大神写的代码一一的对，甚至都快抄过来了，可是还是对不了，逻辑分析也不通。最后一个偶然的机会才发现其实是过不了的是Deque的测试，我用了一个dummnyhead和一个全局变量k,结果就卡住了，最后去掉了两个变量，改用一个局部变量代替，调试调试就过了。</p>
 <p><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/q_100.png" alt></p>
+<h2 id="3-Collinear-Points"><a href="#3-Collinear-Points" class="headerlink" title="3.Collinear Points"></a>3.Collinear Points</h2><p><img src="C:%5CUsers%5Cmywin%5CDesktop%5Chexo_pic%5Clogo_c.png" alt="logo_c"></p>
+<p>​    </p>
+<h3 id="题目说明-2"><a href="#题目说明-2" class="headerlink" title="题目说明"></a>题目说明</h3><p>​    题目说明页面：<a href="https://coursera.cs.princeton.edu/algs4/assignments/collinear/specification.php" target="_blank" rel="noopener">https://coursera.cs.princeton.edu/algs4/assignments/collinear/specification.php</a></p>
+<p>​    计算机图形学的问题，简单来讲就是找出一个二维点集中所有四点共线的子集，在Java编程上会涉及优先队列的运用以及如何实现比较器。算法上主要是为了体现出排序对程序性能的提升。</p>
+<p>​    为了确保性能和练习基层的编程能力，在这些代码中一般尽量不要用集合类，有的用来还会报错（这题的Points查重,如果用set，提交就会报错）</p>
+<h3 id="解题思路分享"><a href="#解题思路分享" class="headerlink" title="解题思路分享"></a>解题思路分享</h3><p>​    Point.java主要考验主要是Comparator,compareTo的写法，思路按着题目的说明来就可以了。其中要注意的一点就是斜率的计算，如果仔细观察给的测试例子，会发现点给的都是整数，为了保证斜率计算的准确，需要将分子，分母都转化为浮点类型后再计算。</p>
+<p>​    BruteCollinearPoints.java,纯暴力，四重嵌套循环就可以了，这个的有一小点需要注意，就是策略的时候，官方Project中有点例子是给FasCollinearPoints.java测试的（要求更高），比如input6.txt,用来测BruteCollinearPoints.java，结果显然会不正确。（可以用最多只有4点共线的例子，如input8.txt来测试）</p>
+<p>​    FastCollinearPoints.java的基本思路就是先选一个点，再按各个点到这个点的斜率排序，这样，找共线点只需要找紧邻的点就可以了，基本可以将复杂度降到O(n^2).当然这个还有一个点需要解决，那就是去重。</p>
+<p>​    </p>
 
       
     </div>
@@ -369,6 +379,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/06/02/解算法题的一般思路/" rel="prev" title="解算法题的一般思路">
+                解算法题的一般思路 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -445,7 +459,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -482,7 +496,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Coursera”Algorithms-I”课后题解"><span class="nav-number">1.</span> <span class="nav-text">Coursera”Algorithms I”课后题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Percolation"><span class="nav-number">1.1.</span> <span class="nav-text">1. Percolation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目说明"><span class="nav-number">1.1.1.</span> <span class="nav-text">题目说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路分享"><span class="nav-number">1.1.2.</span> <span class="nav-text">思路分享</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Queue"><span class="nav-number">1.2.</span> <span class="nav-text">2.Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目说明-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">题目说明</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Coursera”Algorithms-I”课后题解"><span class="nav-number">1.</span> <span class="nav-text">Coursera”Algorithms I”课后题解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Percolation"><span class="nav-number">1.1.</span> <span class="nav-text">1. Percolation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目说明"><span class="nav-number">1.1.1.</span> <span class="nav-text">题目说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路分享"><span class="nav-number">1.1.2.</span> <span class="nav-text">思路分享</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Queue"><span class="nav-number">1.2.</span> <span class="nav-text">2.Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目说明-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">题目说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路分享-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">思路分享</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Collinear-Points"><span class="nav-number">1.3.</span> <span class="nav-text">3.Collinear Points</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目说明-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">题目说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路分享"><span class="nav-number">1.3.2.</span> <span class="nav-text">解题思路分享</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
