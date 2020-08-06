@@ -79,16 +79,17 @@
 
 
 
+<meta name="description" content="第5章 并发性：互斥和同步5.1列出与并发相关的4个设计问题。 ​    1.操作系统必须能够跟踪不同的进程； ​    2.操作系统必须为每个活动进程分配和释放各种资源 ​    3.操作系统必须保护每个进程的数据和物理资源，避免其他进程的无意干扰 ​    4.一个进程的功能和输出结果必须与执行速度无关。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="脑科学概述">
-<meta property="og:url" content="http://yousite.com/2019/11/16/脑科学概述/index.html">
+<meta property="og:title" content="操作系统精髓与设计原理第8版中文：第 5章复习题答案">
+<meta property="og:url" content="http://yousite.com/2020/07/26/操作系统精髓与设计原理第8版中文：第-5章复习题答案/index.html">
 <meta property="og:site_name" content="Ryviuszero">
+<meta property="og:description" content="第5章 并发性：互斥和同步5.1列出与并发相关的4个设计问题。 ​    1.操作系统必须能够跟踪不同的进程； ​    2.操作系统必须为每个活动进程分配和释放各种资源 ​    3.操作系统必须保护每个进程的数据和物理资源，避免其他进程的无意干扰 ​    4.一个进程的功能和输出结果必须与执行速度无关。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/%E8%84%91%E7%A7%91%E5%AD%A6%E6%A6%82%E8%BF%B0.png">
-<meta property="og:updated_time" content="2019-11-16T11:31:03.712Z">
+<meta property="og:updated_time" content="2020-08-06T09:02:03.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="脑科学概述">
-<meta name="twitter:image" content="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/%E8%84%91%E7%A7%91%E5%AD%A6%E6%A6%82%E8%BF%B0.png">
+<meta name="twitter:title" content="操作系统精髓与设计原理第8版中文：第 5章复习题答案">
+<meta name="twitter:description" content="第5章 并发性：互斥和同步5.1列出与并发相关的4个设计问题。 ​    1.操作系统必须能够跟踪不同的进程； ​    2.操作系统必须为每个活动进程分配和释放各种资源 ​    3.操作系统必须保护每个进程的数据和物理资源，避免其他进程的无意干扰 ​    4.一个进程的功能和输出结果必须与执行速度无关。">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yousite.com/2019/11/16/脑科学概述/">
+  <link rel="canonical" href="http://yousite.com/2020/07/26/操作系统精髓与设计原理第8版中文：第-5章复习题答案/">
 
 
 
 
 
-  <title>脑科学概述 | Ryviuszero</title>
+  <title>操作系统精髓与设计原理第8版中文：第 5章复习题答案 | Ryviuszero</title>
   
 
 
@@ -235,7 +236,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yousite.com/2019/11/16/脑科学概述/">
+    <link itemprop="mainEntityOfPage" href="http://yousite.com/2020/07/26/操作系统精髓与设计原理第8版中文：第-5章复习题答案/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ryviuszero">
@@ -252,7 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">脑科学概述</h1>
+          <h1 class="post-title" itemprop="name headline">操作系统精髓与设计原理第8版中文：第 5章复习题答案</h1>
         
 
         <div class="post-meta">
@@ -264,8 +265,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-16T19:30:20+08:00">
-                2019-11-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-26T17:01:03+08:00">
+                2020-07-26
               </time>
             
 
@@ -302,9 +303,52 @@
       
 
       
-        <a id="more"></a>
+        <h3 id="第5章-并发性：互斥和同步"><a href="#第5章-并发性：互斥和同步" class="headerlink" title="第5章 并发性：互斥和同步"></a>第5章 并发性：互斥和同步</h3><p>5.1列出与并发相关的4个设计问题。</p>
+<p>​    1.操作系统必须能够跟踪不同的进程；</p>
+<p>​    2.操作系统必须为每个活动进程分配和释放各种资源</p>
+<p>​    3.操作系统必须保护每个进程的数据和物理资源，避免其他进程的无意干扰</p>
+<p>​    4.一个进程的功能和输出结果必须与执行速度无关。</p>
+<a id="more"></a>
 
-<p><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/%E8%84%91%E7%A7%91%E5%AD%A6%E6%A6%82%E8%BF%B0.png" alt></p>
+<p>5.2产生并发的三种上下文是什么？</p>
+<p>​    多个进程，结构化的应用程序，操作系统结构。</p>
+<p>5.3执行并发进程的最基本要求是什么？</p>
+<p>​    强制相互排斥的能力</p>
+<p>5.4列出进程间的三种互相知道的程度，并简要给出各自的定义。</p>
+<p>​        1.进程间相互不知道对方的存在：相互独立的进程</p>
+<p>​        2.进程间接知道对方的存在:不知道对方进程的ID,但共享某些对象，如I/O缓冲区</p>
+<p>​        3.进程直接知道对方的存在：可以通过进程的ID来相互通信，以合作完成某些活动。</p>
+<p>5.5竞争进程和合作进程间有何区别？</p>
+<p>​    1.对于竞争进程，一个进程的结果与另一个进程活动无关</p>
+<p>​    2.对于合作进程，一个进程的结果可能取决从另一个进程获得的信息</p>
+<p>5.6列出与竞争进程相关的三个控制问题，并简要给出各自的定义。</p>
+<p>​     死锁：死锁是指一组线程或进程被阻塞的情况，因为每个进程都在等待获取另一进程持有的资源，从而导致程序停止运行的情况</p>
+<p>​    饥饿:当多个进程访问共享资源时，由于调度问题，某些进程永远也访问不到共享资源的情况</p>
+<p>​    互斥：当竞争进程同时想要访问一个资源时，有且仅有一个进程能访问到该资源</p>
+<p>5.7列出对互斥的要求。</p>
+<p>​    1.必须强制实现互斥（对于要相同资源或共享对象有关的所有进程）</p>
+<p>​    2.一个在非临界区停止的进程不能干涉其他的进程</p>
+<p>​    3.绝不允许出现需要临界区的进程被无限延迟的情况，即不会死锁或饥饿</p>
+<p>​    4.没有进程在临界区中时，任何需要进入临界区的进程必须能够立即进入</p>
+<p>​    5.对相关进程的执行速度和处理器数量没有任何要求和限制</p>
+<p>​    6.一个进程驻留在临界区的时间必须是有限的</p>
+<p>5.8在信号量上可以执行什么操作？</p>
+<p>​     初始化，递减，增加</p>
+<p>5.9二元信号量和一般信号量有何区别？</p>
+<p>​    只有0,1两个取值</p>
+<p>5.强信号量和弱信号量有何区别？</p>
+<p>​    强信号量要求被阻塞的进程按照先进先出的队列执行，弱信号量不对被阻塞的信号量的执行顺序提出要求。</p>
+<p>5.11什么是管程？</p>
+<p>​            管程是由一个或多个过程、一个初始化序列和局部数据组成的软件模块，其主要特点如下：</p>
+<ol>
+<li>局部数据变量只能被管程的过程访问，任何外部过程都不能访问。</li>
+<li>一个进程通过调用管程的一个过程进入管程。</li>
+<li>在任何时候，只能有一个进程在管程中执行，调用管程的任何其他进程都被阻塞，以等待 管程可用。</li>
+</ol>
+<p>5.12关于消息，阻塞和无阻塞有何区别？</p>
+<p>•阻塞send,阻塞receive：发送者和接收者都被阻塞，直到完成信息的投递。这种情况有时 也称为会合(rendezvous),它考虑到了进程间的紧密同步。<br>•无阻塞send,阻塞receive：尽管发送者可以继续，但接收者会被阻塞直到请求的消息到达。 这可能是最有用的一种组合，它允许一个进程给各个目标进程尽快地发送一条或多条消息。在 继续工作前必须接收到消息的进程将被阻塞，直到该消息到达。例如，一个服务器进程给其他 进程提供服务或资源。<br>•无阻塞send,无阻塞receive：不要求任何一方等待。</p>
+<p>5.13与读者/写者问题相关的条件通常有哪些？</p>
+<p>1.任意数量的读进程可同时读这个文件。<br>2.一次只有一个写进程可以写文件。<br>3.若一个写进程正在写文件，则禁止任何读进程读文件。</p>
 
       
     </div>
@@ -329,8 +373,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/15/操作系统精髓与设计原理第8版中文：第-1-章-计算机系统概述-参考答案/" rel="next" title="操作系统精髓与设计原理第8版中文：第 1 章- 计算机系统概述 参考答案">
-                <i class="fa fa-chevron-left"></i> 操作系统精髓与设计原理第8版中文：第 1 章- 计算机系统概述 参考答案
+              <a href="/2020/07/24/操作系统精髓与设计原理第8版中文：第-4-章复习题答案/" rel="next" title="操作系统精髓与设计原理第8版中文：第 4 章- 计算机系统概述 参考答案">
+                <i class="fa fa-chevron-left"></i> 操作系统精髓与设计原理第8版中文：第 4 章- 计算机系统概述 参考答案
               </a>
             
           </div>
@@ -338,10 +382,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/27/关于武汉新型肺炎的一些数学模型及预测/" rel="prev" title="关于武汉新型肺炎的一些数学模型及预测">
-                关于武汉新型肺炎的一些数学模型及预测 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -393,8 +433,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -436,6 +485,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第5章-并发性：互斥和同步"><span class="nav-number">1.</span> <span class="nav-text">第5章 并发性：互斥和同步</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
