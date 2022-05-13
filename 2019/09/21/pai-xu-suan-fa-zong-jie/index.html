@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于武汉新型肺炎的一些数学模型及预测, ryvius">
-    <meta name="description" content="一. 英国伦敦帝国理工的报告关于发生在武汉的新型肺炎情况，到目前为止，英国伦敦帝国理工（Imperial College）一共发布了两份关于早期感染人数的报告。一份是在一月十七日发布的，一份是在一月 22 日发布的。都是基于通过样本估计总体">
+    <meta name="keywords" content="排序算法总结, ryvius">
+    <meta name="description" content="
+
+merge sort 源自wikipedia
+
+简介只有需要排序的对象具有一定的序（满足 非对称性 ，可传递性，完备性），就可以进行排序。为了专注于算法本身，下面的算法以整数数组为对象，实现排序。其中冒泡排序，选择排序的基本思想都比较简">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,7 +34,7 @@
 
     
 
-    <title>关于武汉新型肺炎的一些数学模型及预测 | ryvius</title>
+    <title>排序算法总结 | ryvius</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -323,12 +327,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">关于武汉新型肺炎的一些数学模型及预测</h1>
+                    <h1 class="description center-align post-title">排序算法总结</h1>
                 </div>
             </div>
         </div>
@@ -444,16 +448,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
-                            <a href="/tags/%E9%A2%84%E6%B5%8B/">
-                                <span class="chip bg-color">预测</span>
+                            <a href="/tags/Leetcode/">
+                                <span class="chip bg-color">Leetcode</span>
                             </a>
                         
-                            <a href="/tags/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E/">
-                                <span class="chip bg-color">新冠肺炎</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                <span class="chip bg-color">排序</span>
                             </a>
                         
                     </div>
@@ -464,12 +472,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                随笔
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
-                                数据分析
+                            <a href="/categories/%E7%AE%97%E6%B3%95/Leetcode/" class="post-category">
+                                Leetcode
                             </a>
                         
                     </div>
@@ -481,7 +489,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-25
+                    2019-09-21
                 </div>
                 
 
@@ -490,14 +498,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    5 分
                 </div>
                 
 
@@ -520,106 +528,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一-英国伦敦帝国理工的报告"><a href="#一-英国伦敦帝国理工的报告" class="headerlink" title="一. 英国伦敦帝国理工的报告"></a>一. 英国伦敦帝国理工的报告</h2><p>关于发生在武汉的新型肺炎情况，到目前为止，英国伦敦帝国理工（Imperial College）一共发布了两份关于早期感染人数的报告。一份是在一月十七日发布的，一份是在一月 22 日发布的。都是基于通过样本估计总体的思想，主要通过航空数据和境外感染的各例对整个武汉感染人数做出估计。</p>
-<p>官方报告提高计算方法的英文版：</p>
-<p><a target="_blank" rel="noopener" href="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/2.png"><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/2.png"></a></p>
-<p>在第二份报告中，英国伦敦理工大学还在第二份报告中提供了对应的普通话翻译，下面截取的是关于计算方法的部分。</p>
-<p><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/3.png"></p>
-<p><a target="_blank" rel="noopener" href="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/3.png"><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/3.png"></a></p>
-<p>中文翻译总体上来说还是比较正确的，但有一处地方却不小心翻译错了，就在关于 p 计算的地方：中文翻译是 <strong>p = 每日国际旅行的概率 x 平均检测除一例病例的概率</strong>，而根据英文，及模型实际的含义推测，<strong>平均检测除一例病例的概率 **</strong> 实际应为<strong>平均检出时间</strong>，即为表格中的检测窗口时间（Detection window(days）。</p>
-<p>报告一是利用的截至 1 月 16 日的数据。以 Baseline 为例，估计感染的总数 = 3/((3301 / 1.9e7) * 10) ，约为 1727，至于英国理工大学官方为什么取的是 1723，我也不太清楚，但整体的计算方法应该不会有错，结果也差不多。</p>
-<p><a target="_blank" rel="noopener" href="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/1.png"><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/1.png"></a></p>
-<p>报告二是采用的截至 1 月 18 日的数据。国外确诊病例增加到了 7 例，其它的计算方法不变，参数也不变，因而估计感染的总数为 7/((3301 / 1.9e7) * 10)，约为 4029.</p>
-<p>此外两份报告还对确诊人数，和武汉国际机场有效服务的人数进行了敏感性分析，及计算了 95% 置信区间的估计病例可能波动的范围。</p>
-<p><a target="_blank" rel="noopener" href="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/4.png"><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/4.png"></a></p>
-<p>英国理工大学第二份报告是在 1 月 22 日报告发出，而我写这篇文章的时间是 1 月 17 日。已经有了更多的情报可以知道，一个是关于检测窗口时间的情报，报告中的检测窗口时间 = 潜伏期 + 确诊时间。而报告估计的潜伏期为 5<del>6 天，而现在（1/27）确定的潜伏期时间平均为 10 天，最长为 14 天。这个数值的变化会使最终的结果变小。第二个就是关于武汉机场实际服务的人口的 1100 万</del> 1900 万，最新新闻提到武汉在在封城前有 500 万人左右离开武汉，900 万人留在武汉。加起来就是 1400 万人左右。在 1100 万~ 1900 万的范围内。</p>
-<p>就个人而言，我觉得这个报告的结果（早期传染者为 1700~7800）还是可信的，因为模型的计算思路还是合理且正确的（还有一点我没有深入研究，就是关于可信区间的计算，我还没有亲自验证），当然整个模型是建立在一些假设的基础上的（报告中有提，假设基本合理或对最终结果影响不大)。</p>
-<h2 id="SIR-模型"><a href="#SIR-模型" class="headerlink" title="SIR 模型"></a>SIR 模型</h2><p>除了上述英国理工的数学模型，我还在媒体上看到的另一个模型就是 SIR 模型，一个基于微分方程的传染病模型。具体内容见下图：</p>
-<p><a target="_blank" rel="noopener" href="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/5.png"><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/5.png"></a></p>
-<p><a target="_blank" rel="noopener" href="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/6.png"><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/6.png"></a></p>
-<p> 刚开始看到这个模型的时候，我是相当震惊的——居然根本不用这次疫情的数据，仅仅利用 03 年 SARS 已经有的模型参数就可以做到初期发展基本吻合，还可以预测疫情的发展趋势。便想了解一下这个模型。看了看百度百科，觉得虽说分析和解析解比较难求，但是一次次的迭代，求出数值解，画出上面类似的图像还是挺简单的，便想着自己用 python 实现一下。</p>
-<p> 公式刚开始的时候是用的百度百科中的，可是画出来的图形就是特别怪异，再三检测代码后觉得代码应该是没有问题的，再看了看上的图，觉得应该是出自一个可以动态作图的网页，便通过图中的关键词”Hans Nesse - Gobal Health - SIR Model“，一下就搜出来了对应的画图网站：<a target="_blank" rel="noopener" href="http://www.public.asu.edu/~hnesse/classes/sir.html">http://www.public.asu.edu/~hnesse/classes/sir.html</a>. 并且下面还有微分方程的介绍，对比了一下百度百科中的微分方程，发现原来百度百科把 <strong>I*S/ N</strong> 下面的 N 给弄掉了，代码改正后，输入和于教授相同的初始参数，代码终于跑通了。代码及结果如下。</p>
-<pre class="line-numbers language-none"><code class="language-none"># 导入相关包
-import numpy as np
-import matplotlib.pyplot as plt
+                <p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/10/22/Y8wgydFehL3HmkE.gif"><img src="https://i.loli.net/2019/10/22/Y8wgydFehL3HmkE.gif"></a></p>
+<blockquote>
+<p>merge sort 源自wikipedia</p>
+</blockquote>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>只有需要排序的对象具有一定的序（满足 非对称性 ，可传递性，完备性），就可以进行排序。为了专注于算法本身，下面的算法以整数数组为对象，实现排序。其中冒泡排序，选择排序的基本思想都比较简单，但时间复杂度较高，插入排序有点类似与选择排序，但实际的运行会快一点。堆排序中使用的堆的数据结构，是优先队列实现的基础。归并排序可以达到排序算法理论上的最佳性能，但现实生活中需要排序的对象一般都是部分有序的，所以快排的实际性能会好于归并排序，归并排序可以通过当归并的数组较短时，使用插入排序来优化性能。而快排为了避免最差性能O(n^2)的出现,可以先打乱一下组数，以达到平均的性能。</p>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p> 从头到尾，比较相邻的两个元素，通过交换位置，将较大的不断后移。是一种减而治之的思想的运用，每次冒泡完成，问题的规模就会减一，下面是实现代码：</p>
+<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></pre></td><td><pre><span><span><span>private</span> <span>void</span> <span>bubbleSort</span><span>(<span>int</span>[] arr)</span> </span>{</span><br><span>    <span>if</span> (arr == <span>null</span>) <span>return</span>;</span><br><span>    <span>int</span> n = arr.length;</span><br><span></span><br><span>    <span>for</span> (<span>int</span> i = <span>0</span>; i &lt; n; i++) {</span><br><span>        <span>for</span> (<span>int</span> j = <span>0</span>; j &lt; n - <span>1</span> - i; j++) {</span><br><span>            <span>if</span> (arr[j] &gt; arr[j + <span>1</span>]) {</span><br><span>                swap(arr, j, j + <span>1</span>);</span><br><span>            }</span><br><span>        }</span><br><span>    }</span><br><span>}</span><br><span></span><br><span><span><span>private</span> <span>void</span> <span>swap</span><span>(<span>int</span>[] arr, <span>int</span> a, <span>int</span> b)</span> </span>{</span><br><span>    <span>int</span> tmp = arr[a];</span><br><span>    arr[a] = arr[b];</span><br><span>    arr[b] = tmp;</span><br><span>}</span><br></pre></td></tr></tbody></table>
 
-# 初始化参数
-# 易感人群数量
-S_0 = 0
-
-# 初始感染数量
-I_0 = 0
-
-# 治愈和死亡数量
-R_0 = 0
-
-# 传染率beta
-beta = 0
-
-# 康复和死亡率
-gamma = 0
-
-# 德教授于晓华的参数
-S_0 = 1000000
-I_0 = 2000
-R_0 = 50
-beta = 0.2586
-gamma = 0.0821
-
-N = I_0 + S_0 + R_0
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>从数组中找到最小的元素，然后放到前面，是一种减而治之的算法。</p>
+<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></pre></td><td><pre><span><span><span>private</span> <span>void</span> <span>selectionSort</span><span>(<span>int</span>[] arr)</span> </span>{</span><br><span>    <span>if</span> (arr == <span>null</span>) <span>return</span>;</span><br><span>    <span>int</span> n = arr.length;</span><br><span></span><br><span></span><br><span>    <span>for</span> (<span>int</span> i = <span>0</span>; i &lt; n; i++) {</span><br><span>        <span>int</span> j = i;</span><br><span>        <span>int</span> mark = j;</span><br><span>        <span>int</span> min = arr[i];</span><br><span>        <span>while</span> (++j &lt; n) {</span><br><span>            <span>if</span> (arr[j] &lt; min) {</span><br><span>                min = arr[j];</span><br><span>                mark = j;</span><br><span>            }</span><br><span>        }</span><br><span></span><br><span>        swap(arr, i, mark);</span><br><span>    }</span><br><span>}</span><br></pre></td></tr></tbody></table>
 
 
-# 计算导数
-def de_S(I, S):
-    return -beta * I * S / N
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p> 将数组分为排序好的部分和未排序好的部分，如果未排序的元素大于已排序好的最后一个元素，则直接排在已排好序的数组后面，否则则插入到前面对应位置。</p>
+<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></pre></td><td><pre><span><span><span>private</span> <span>void</span> <span>insertionSort</span><span>(<span>int</span>[] arr)</span> </span>{</span><br><span><span>if</span> (arr == <span>null</span>) <span>return</span>;</span><br><span><span>int</span> n = arr.length;</span><br><span></span><br><span>    <span>for</span> (<span>int</span> i = <span>0</span>; i &lt; n - <span>1</span>; i++) {</span><br><span>    <span>int</span> j = i + <span>1</span>;</span><br><span>        <span>while</span> (j &gt; <span>0</span> &amp;&amp; arr[j - <span>1</span>] &gt; arr[j]) {</span><br><span>        swap(arr, j - <span>1</span>, j);</span><br><span>        j--;</span><br><span>        }</span><br><span>    }</span><br><span></span><br><span>}</span><br></pre></td></tr></tbody></table>
 
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>归并排序是一种分而治之的算法，用递归实现，思想是如果两个数组已经排好序，然后我们只需要将他们合并就可以了，递归基是单个元素的数组，这个时候数组一定是有序的。</p>
+<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br></pre></td><td><pre><span><span><span>private</span> <span>void</span> <span>mergeSort</span><span>(<span>int</span>[] arr)</span> </span>{</span><br><span>       mergeSort(arr, <span>0</span>, arr.length - <span>1</span>);</span><br><span>   }</span><br><span></span><br><span>   <span><span>private</span> <span>void</span> <span>mergeSort</span><span>(<span>int</span>[] arr, <span>int</span> low, <span>int</span> high)</span> </span>{</span><br><span>       <span>if</span> (low &gt;= high) <span>return</span>;</span><br><span></span><br><span>       <span>int</span> mid = low + (high - low) / <span>2</span>;</span><br><span>       <span>int</span>[] aux = arr.clone();</span><br><span>       mergeSort(arr, low, mid);</span><br><span></span><br><span>       mergeSort(arr, mid + <span>1</span>, high);</span><br><span></span><br><span>       merge(aux, arr, low, mid, high);</span><br><span>   }</span><br><span></span><br><span>   <span><span>private</span> <span>void</span> <span>merge</span><span>(<span>int</span>[] aux, <span>int</span>[] arr, <span>int</span> low, <span>int</span> mid, <span>int</span> high)</span> </span>{</span><br><span></span><br><span>       <span>for</span> (<span>int</span> k = low; k &lt;= high; k++)</span><br><span>           aux[k] = arr[k];</span><br><span></span><br><span>       <span>int</span> i = low, j = mid + <span>1</span>;</span><br><span></span><br><span>       <span>for</span> (<span>int</span> k = low; k &lt;= high; k++) {</span><br><span>           <span>if</span> (i &gt; mid) arr[k] = aux[j++];</span><br><span>           <span>else</span> <span>if</span> (j &gt; high) arr[k] = aux[i++];</span><br><span>           <span>else</span> <span>if</span> (aux[i] &lt; aux[j]) arr[k] = aux[i++];</span><br><span>           <span>else</span> arr[k] = aux[j++];</span><br><span>       }</span><br><span></span><br><span></span><br><span>   }</span><br></pre></td></tr></tbody></table>
 
-def de_I(I, S):
-    return beta * I * S / N - gamma * I
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆是一种基于二叉树的数据结构，父亲节点的值始终大于左子树和右子树。由于是一颗满二叉树，实际上可以用一个数组来维护，元素k的左右子树的索引为（2_k + 1 , 2_ * k + 2)(if(2*k + 1, 2 &lt; length));首先通过递归的从父节点和子树交换值建立和维护堆。然后不断地将最大的一个元素和最后一个元素交换位置，并维护堆，从而将数组排序。</p>
+<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br></pre></td><td><pre><span><span><span>private</span> <span>void</span> <span>heapify</span><span>(<span>int</span>[] arr, <span>int</span> length, <span>int</span> i)</span> </span>{</span><br><span>        <span>int</span> leftChild = <span>2</span> * i + <span>1</span>;</span><br><span>        <span>int</span> rightChild = <span>2</span> * i + <span>2</span>;</span><br><span>        <span>int</span> largest = i;</span><br><span></span><br><span>        <span>if</span> (leftChild &lt; length &amp;&amp; arr[leftChild] &gt; arr[largest]) {</span><br><span>            largest = leftChild;</span><br><span>        }</span><br><span></span><br><span>        <span>if</span> (rightChild &lt; length &amp;&amp; arr[rightChild] &gt; arr[largest]) {</span><br><span>            largest = rightChild;</span><br><span>        }</span><br><span>        <span>if</span> (largest != i) {</span><br><span>            swap(arr, largest, i);</span><br><span>            heapify(arr, length, largest);</span><br><span>        }</span><br><span></span><br><span>    }</span><br><span></span><br><span>    <span><span>private</span> <span>void</span> <span>heapSort</span><span>(<span>int</span>[] arr)</span> </span>{</span><br><span>        <span>if</span> (arr.length == <span>0</span>) <span>return</span>;</span><br><span></span><br><span>        <span>int</span> length = arr.length;</span><br><span></span><br><span>        <span>for</span> (<span>int</span> i = length / <span>2</span> - <span>1</span>; i &gt;= <span>0</span>; i--) {</span><br><span>            heapify(arr, length, i);</span><br><span>        }</span><br><span></span><br><span>        <span>for</span> (<span>int</span> i = length - <span>1</span>; i &gt;= <span>0</span>; i--) {</span><br><span>            swap(arr, <span>0</span>, i);</span><br><span>            heapify(arr, i, <span>0</span>);</span><br><span>        }</span><br><span></span><br><span>    }</span><br></pre></td></tr></tbody></table>
 
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>快速排序是一种减而治之的算法，基于递归实现选取一个数，然后减小于它的数放在左边，大于它的数放在右边，然后再对左边和右边分别进行快排，对算法稍微改一下就可以得到topK算法。</p>
+<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br></pre></td><td><pre><span><span><span>private</span> <span>void</span> <span>quickSort</span><span>(<span>int</span>[] arr)</span> </span>{</span><br><span>        quickSort(arr, <span>0</span>, arr.length - <span>1</span>);</span><br><span>    }</span><br><span></span><br><span> <span><span>private</span> <span>void</span> <span>quickSort</span><span>(<span>int</span>[] arr, <span>int</span> start, <span>int</span> end)</span> </span>{</span><br><span>        <span>if</span> (start &gt;= end) <span>return</span>;</span><br><span>        <span>int</span> k = partition(arr, start, end);</span><br><span>        quickSort(arr, start, k - <span>1</span>);</span><br><span>        quickSort(arr, k + <span>1</span>, end);</span><br><span>    }</span><br><span> <span><span>private</span> <span>int</span> <span>partition</span><span>(<span>int</span> arr[], <span>int</span> low, <span>int</span> high)</span> </span>{</span><br><span>        <span>int</span> pivot = high;</span><br><span></span><br><span>        <span>int</span> count = low;</span><br><span></span><br><span>        <span>for</span> (<span>int</span> j = low; j &lt; high; j++) {</span><br><span>            <span>if</span> (arr[j] &lt; arr[pivot]) {</span><br><span>                swap(arr, j, count);</span><br><span>                count++;</span><br><span>            }</span><br><span>        }</span><br><span></span><br><span>        swap(arr, count, high);</span><br><span>        <span>return</span> count;</span><br><span>    }</span><br></pre></td></tr></tbody></table>
 
-def de_R(I):
-    return gamma * I
-
-
-# 计算days天内的三种人数的数据
-
-days = 150
-X = np.arange(0, days)
-# print(X)
-I_t = np.zeros(days)
-S_t = np.zeros(days)
-R_t = np.zeros(days)
-
-# 初始化
-I_t[0] = I_0
-S_t[0] = S_0
-R_t[0] = R_0
-
-for i in range(1, days):
-    d_I = de_I(I_t[i - 1], S_t[i - 1])
-    d_S = de_S(I_t[i - 1], S_t[i - 1])
-    d_R = de_R(I_t[i - 1])
-    I_t[i] = I_t[i - 1] + d_I
-    S_t[i] = S_t[i - 1] + d_S
-    R_t[i] = R_t[i - 1] + d_R
-
-
-# 绘图
-def plot():
-    plt.plot(X, S_t, 'r--', X, I_t, 'b--', X, R_t, 'g--')
-    plt.show()
-
-
-plot()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><a target="_blank" rel="noopener" href="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/Figure_1.png"><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/Figure_1.png"></a></p>
-<p> SIR 模型是传染病模型中一个基本模型，即在一个封闭的环境（S+I+R 为常数）中，S 为易感人群，I 为感染者，R 为康复者，S 与 I 接触则有一定比例会变为 I, I 中有一定比例会变为 R.S,I,R 不断动态变化直到稳定。</p>
-<p> SIR 没有任何关于疫情其它信息的利用，人口，地理信息，初期的疫情数据，隔离等措施。所有的影响都将反映在感染率 beta, 移除率 gamma 上（应该会有利用疫情的早期数据估计初始参数的方法，这一点我还没有深入。）加上于教授用的就是 SARS 的数据。 而这次的疫情和 SARS 不太一样，一是潜伏期还可以传染而且发生在武汉春运期间，二是整个国家采取的应对措施不同。还有一点就是当 S 初始值设为 100 万时，I 的最大值为 30 万左右。当然最重要的是模型过于简单。所以我觉得这个 SIR 模型不太可信。</p>
-<h2 id="指数拟合模型"><a href="#指数拟合模型" class="headerlink" title="指数拟合模型"></a>指数拟合模型</h2><p>上面的两个模型都没有用到最新的，最核心的数据那就是国内每天报告的累计确诊总数。我认为，可以用种群中的”J” 型曲线，“S” 型曲线来拟合。在新型冠状病毒爆发的早期，以接近指数的方式增长，也就是”J” 型曲线，这个时候可以通过指数函数来拟合，但随着各种防控措施的生效（主要是隔离），病毒的环境容纳量被限制住，确诊人数的增长会放缓，最终被限制住，然后确诊的人被治愈或是死亡那，最终疫情结束。</p>
-<p>这个主要采用 1 月 11 日到 1 月 26 日的数据（来自 wikipedia），因为这一段时间的数据是连续的，前面日期的数据不但断断续续，而且还忽高忽低。还有就是通过新增累计的和确诊的病例和最后累计的数并不相当。由于相差不大，这里也不做深入探究。拟合曲线即结果如下：</p>
-<p><a target="_blank" rel="noopener" href="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/10.png"><img src="https://mytest-1255922718.cos.ap-beijing.myqcloud.com/images/10.png"></a></p>
-<p>这里用 1 月 16 日到 1 月 25 日的数据作拟合，预测 1 月 26 日的病例数和 1 月 27 日的病例数。拟合曲线的 R 平方为 0.99，说明拟合得相当得好，虽然不能说明这个趋势将一直持续下去，至少可以说明疫情正处于早期爆发阶段。正在以指数形式增长。而预测的 1 月 26 日的情况，结果的误差约为 11%，已经有点大了。未来如何变化，还是等待更多的数据出来吧。</p>
+<h2 id="Java中的排序算法"><a href="#Java中的排序算法" class="headerlink" title="Java中的排序算法"></a>Java中的排序算法</h2><p>在Java中只要实现了comparable 接口的类都可以用Collections.sort或Arrays.sort进行排序。如果要排序的对象没有实现comparable接口，也可以通过自定义comparator接口来实现使之能进行排序</p>
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://stackabuse.com/sorting-algorithms-in-java/#insertionsort">Sorting Algorithms in Java</a></li>
+<li><a target="_blank" rel="noopener" href="https://algs4.cs.princeton.edu/21elementary/">普林斯顿《Algorthms》 书中对排序的讲解</a></li>
+</ol>
 
                 
             </div>
@@ -646,7 +583,7 @@ plot()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://bystom.com/2020/01/25/guan-yu-wu-han-xin-xing-fei-yan-de-yi-xie-shu-xue-mo-xing-ji-yu-ce/">http://bystom.com/2020/01/25/guan-yu-wu-han-xin-xing-fei-yan-de-yi-xie-shu-xue-mo-xing-ji-yu-ce/</a>
+                    <a href="http://bystom.com/2019/09/21/pai-xu-suan-fa-zong-jie/">http://bystom.com/2019/09/21/pai-xu-suan-fa-zong-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -684,16 +621,20 @@ plot()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
-                                <a href="/tags/%E9%A2%84%E6%B5%8B/">
-                                    <span class="chip bg-color">预测</span>
+                                <a href="/tags/Leetcode/">
+                                    <span class="chip bg-color">Leetcode</span>
                                 </a>
                             
-                                <a href="/tags/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E/">
-                                    <span class="chip bg-color">新冠肺炎</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%8E%92%E5%BA%8F/">
+                                    <span class="chip bg-color">排序</span>
                                 </a>
                             
                         </div>
@@ -745,13 +686,13 @@ plot()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/13/suan-fa-ti-yi-ban-de-jie-ti-si-lu/">
+                <a href="/2020/01/25/guan-yu-wu-han-xin-xing-fei-yan-de-yi-xie-shu-xue-mo-xing-ji-yu-ce/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="算法题一般的解题思路">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="关于武汉新型肺炎的一些数学模型及预测">
                         
-                        <span class="card-title">算法题一般的解题思路</span>
+                        <span class="card-title">关于武汉新型肺炎的一些数学模型及预测</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -762,18 +703,18 @@ plot()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-13
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-01-25
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
                                 </a>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/Leetcode/" class="post-category">
-                                    Leetcode
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
+                                    数据分析
                                 </a>
                             
                             
@@ -783,16 +724,16 @@ plot()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/%E9%A2%84%E6%B5%8B/">
+                        <span class="chip bg-color">预测</span>
                     </a>
                     
-                    <a href="/tags/%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/">
-                        <span class="chip bg-color">解题思路</span>
+                    <a href="/tags/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E/">
+                        <span class="chip bg-color">新冠肺炎</span>
                     </a>
                     
                 </div>
@@ -806,13 +747,13 @@ plot()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/21/pai-xu-suan-fa-zong-jie/">
+                <a href="/2019/08/17/shi-yong-hexo-jia-github-pages-da-jian-jian-ji-de-ge-ren-bo-ke/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="排序算法总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="使用Hexo加Github Pages搭建简洁的个人博客">
                         
-                        <span class="card-title">排序算法总结</span>
+                        <span class="card-title">使用Hexo加Github Pages搭建简洁的个人博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -823,43 +764,15 @@ plot()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-17
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                            
-                            <a href="/categories/%E7%AE%97%E6%B3%95/Leetcode/" class="post-category">
-                                    Leetcode
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ryviuszero
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
-                    </a>
-                    
-                    <a href="/tags/Leetcode/">
-                        <span class="chip bg-color">Leetcode</span>
-                    </a>
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
-                        <span class="chip bg-color">排序</span>
-                    </a>
-                    
                 </div>
                 
             </div>
