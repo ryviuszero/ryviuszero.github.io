@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2022/04/25/hello-world/"/>
-      <url>/2022/04/25/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 算法 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> demo </tag>
-            
-            <tag> 算法 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>算法题一般的解题思路</title>
       <link href="/2020/05/13/suan-fa-ti-yi-ban-de-jie-ti-si-lu/"/>
       <url>/2020/05/13/suan-fa-ti-yi-ban-de-jie-ti-si-lu/</url>
@@ -54,6 +27,41 @@
             <tag> Java </tag>
             
             <tag> 解题思路 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker入门与实践</title>
+      <link href="/2020/04/13/docker-ru-men-yu-shi-jian/"/>
+      <url>/2020/04/13/docker-ru-men-yu-shi-jian/</url>
+      
+        <content type="html"><![CDATA[<p>最近在学习的时候经常会看到docker的身影,由是好奇,便查阅了相关资料,发现其实docker更是偏向企业级的应用.比如:web应用,API服务,测试应用等等.一般而言不经常使用的技术即使学了也会很快忘记,这里主要对个人在日常中会使用到的场景做一个总结。</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>关于docker的基本命令和使用入门,大家可以看下面的推荐文章.一般介绍Docker技术的时候会提到Linux容器技术,namespace等等底层上的一些名词,不过我并没有学习操作系统相关的知识,所以对这些构架上的不同及其所带来的优点并不理解(以后找个时间得补补相关知识.)就从使用的角度而言,docker就像是一个轻量化的虚拟机.可以十分便捷的打包运行环境,其大多数应用也是基于此。</p><h2 id="搭建linux学习环境"><a href="#搭建linux学习环境" class="headerlink" title="搭建linux学习环境"></a>搭建linux学习环境</h2><p>出于各种各样的原因，或许仅仅是觉得linux比较高级，或许是想搭一个博客，或许是有些软件在liunx只能在linux上运行，或许是觉得linux编程更爽，或许是需要连接到服务器的主机进行某些工作……</p><p>通过ssh连接到一台服务器来作为学习环境是一个选择，但一般会需要一定的费用，而且只有在你有学习的意愿的时候才会去学习，不能创造一个经常接触linux去实践的机会．所以说安装一个基于linux版本的发行系统就是一个不错的选择，对于初学者,推荐ubuntu,现在都9102年了，双系统的安装再也没有了&lt;&lt;鸟哥的linux私房菜&gt;&gt;中的那么复杂，基本一路next即可．而且通过gnome-tweak-tool,及在gome-look中下载各种主题，可以使ubuntu达到十分赏心悦目的程度．但是还有一个问题就是在你还不是特别了解linux系统的时候，也许不知道哪一条命令就把系统给弄崩了，比如著名的<code>rm -rf /</code>.这时候就需要搭建一个耐cao的沙盒系统，这个时候你就可以通过docker来满足你的需求。</p><h3 id="从Docker-Hub-拉取镜像"><a href="#从Docker-Hub-拉取镜像" class="headerlink" title="从Docker Hub 拉取镜像"></a>从Docker Hub 拉取镜像</h3><p>从仓库中抓取镜像的命令格式为：<code>docker image pull library/hello-world</code>这里以常用的ubuntu镜像为例：</p><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker image pull ubuntu<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果拉取成功，就可以在执行以下命令后看到自己拉取的镜像</p><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker image ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="运行容器中的bash"><a href="#运行容器中的bash" class="headerlink" title="运行容器中的bash"></a>运行容器中的bash</h3><p>在docker中，镜像和容器的关系就好像类和对象一样．我们可以通过<code>docker run</code>命令新建一个容器并启动：</p><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker run -it ubuntu /bin/bash//成功启动会显示类似下面的字样root@4f9947fb07c1:/# //-it 表示以交互模式打开，这样一个轻量的ubuntu容器就建好了，可以试着运行几个常用的命令root@4f9947fb07c1:/# lsbin   dev  home  lib64  mnt  proc  run   srv  tmp  varboot  etc  lib   media  opt  root  sbin  sys  usr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="选择容器的保存方式"><a href="#选择容器的保存方式" class="headerlink" title="选择容器的保存方式"></a>选择容器的保存方式</h3><p>如果我们想直接退出刚刚创建的容器，直接在容器中输入<code>exit</code>或者<code>Ctrl</code> + <code>D</code>即可．如果我们想再次进入这个容器，可以先通过下面的命令找到container ID:</p><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker container ls -a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>再使用<code>docker exec</code>命令进入之前的容器中继续运行：</p><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker exec -it [ContainerID　OR Container Name] /bin/bash //如果容器已经停止，可以用下面的命令启动容器docker container start [ContainerID]//如果觉得容器自动生成的名字没有意义，还可以通过下面的方式给容器重命名docker rename 原容器名　新容器名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这样的话，如果我们想要继续运行上一次的容器，就使用<code>docker exec</code>命名．如果玩崩了，就通过命令<code>docker run</code>再从原始镜像新建一个容器。</p><h2 id="搭建深度学习环境"><a href="#搭建深度学习环境" class="headerlink" title="搭建深度学习环境"></a>搭建深度学习环境</h2><p>在数据科学中，如果使用python语言，一般会使用anconda来管理各种python包，管理深度学习相关的包也是同样如此．但一般初次配置都还是有点麻烦的．特别是有时候还会遇到依赖冲突的问题．如果我们通过Dockefile将特定项目需要的模块打包安装使用，这样不仅不会破坏本地的包，而且之后想要启动对应的环境也就只要一条命令就可以了，并且还可以以镜像的形式和他人分享。</p><h3 id="拉取现有的镜像"><a href="#拉取现有的镜像" class="headerlink" title="拉取现有的镜像"></a>拉取现有的镜像</h3><h4 id="选取镜像"><a href="#选取镜像" class="headerlink" title="选取镜像"></a>选取镜像</h4><blockquote><p>当然上面的工作已经有人做了，如果没有特殊要求，就是跟着教程跑跑，他人已经做好的镜像一般是够用的，在深度学习方面，deepo的镜像是比较出名的，基本常用的深度学习框架都有．当然如果你要用百度的paddlepaddle，官网上也有相关镜像．网上还有其他相关镜像，好还是不好，关键还是看个人需求．不过一应俱全也是有缺点的，那就是体积比较到大．将近１２个g（GPU）.</p></blockquote><h4 id="使用juypter-notebook"><a href="#使用juypter-notebook" class="headerlink" title="使用juypter notebook"></a>使用juypter notebook</h4><p>运行下面的命令打开镜像中的juypter notebook</p><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker run -it --runtime=nvidia --rm -p 8888:8888 -v /home/mywin/kaggle/test:/root ufoym/deepo:all-jupyter jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token=--notebook-dir='/root'<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>需要注意的是 <code>/home/mywin/kaggle/test</code>要换成对应自己宿主机中一个实际存在的文件夹，也就是你juypter notebook脚本的最终保存空间 ,然后就可以通过<code>127.0.0.1:8888</code>打开juypter notebook</p><p>上面的run 有<code>--rm</code>选项，当你退出容器后，容器就会被删除．如果想要保留这个容器，可以去掉这个选项．然后通过下面的命令找到<code>Container ID</code></p><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker container ls -a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后找到对应随机生产的名字，给它换一个好记一点的名字。</p><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker rename randomName meaningfulName<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>之后就可以方便的通过下面的命名来启动或是关闭你的深度学习环境</p><pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker container start/stop yourContainerName<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="个性化定制"><a href="#个性化定制" class="headerlink" title="个性化定制"></a>个性化定制</h3><p><strong>cs231n的情景:</strong></p><p>cs231n的课程的作业环境，官方推荐Google Cloud平台，虽然要连上需要费一点功夫，但是只要绑定一张信用卡（visa, master之类的），就会送$300美元的代金券，还是听不错的，用来学完这门课应该是足够的．本地官方给的指南是anaconda和virtualenv.anaconda 其实挺方便的，但官方的依赖文件是pip安装所需的requirements.txt,而不是anaconda复制环境直接可以用的.yaml文件，所以需要手动转化一下后在使用．virtualenv不太熟，试过一次也没有成功．需要一提的是依赖中的包，有的用当下的最新版并没有问题，有的用了最新版的包，代码就会报错．</p><p>回归主题，anaconda的方式其实已经错了，当然docker也是可行的．下面就是我基于pythorch的官方镜像拓展出来的cs231n的运行环境的Dockerfile</p><pre class="line-numbers language-Dockerfile" data-language="Dockerfile"><code class="language-Dockerfile">FROM pytorch/pytorchRUN apt-get update COPY requirements.txt .RUN apt-get update &amp;&amp;  pip install --upgrade jupyterRUN pip install --upgrade matplotlibRUN pip install --upgrade -r requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>在Dockerfile目录下通过下面的命令构建：</p><pre class="line-numbers language-none"><code class="language-none">docker build -t cs231n .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>中途因为依赖的问题也报了一下错，我采取的措施是，首先删掉了<code>requirement.txt</code>中的<code>site</code>行．</p><p>到了build的时候，由于pythorch需要的包，有些是比requirement.txt中新一点的．所以不能恢复到以前的版本．这里的错误其实是可以忽略的．</p><p>我们可以先找到我们构建的镜像：</p><pre class="line-numbers language-none"><code class="language-none">docker image ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>由于并没有完成我们的构建过程，所以并没有生产对应的镜像名，但并不影响使用，我们可以自己来重命名镜像:</p><pre class="line-numbers language-none"><code class="language-none">docker tag ImageID newName<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>接着我们便可以通过下面的命令创造容器，测试镜像：</p><pre class="line-numbers language-none"><code class="language-none">docker run --rm -it -p 80:80 -v /home/mywin/kaggle/cs231n:/workspace cs231n jupyter-notebook --no-browser --ip=0.0.0.0 --port=80 --allow-root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>同样的本地数据卷<code>/home/mywin/kaggle/cs231n</code>换到自己cs231n作业代码所在的目录．我测试了一下自己已完成的knn.ipynb，顺利通过。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发环境搭建 </category>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> python </tag>
+            
+            <tag> linux </tag>
+            
+            <tag> 运维 </tag>
+            
+            <tag> cs231n </tag>
             
         </tags>
       
@@ -87,6 +95,19 @@
             <tag> 新冠肺炎 </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>查找算法总结</title>
+      <link href="/2019/09/22/cha-zhao-suan-fa-zong-jie/"/>
+      <url>/2019/09/22/cha-zhao-suan-fa-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://i.loli.net/2019/10/23/WUhVNms2bwCM3HF.png"><img src="https://i.loli.net/2019/10/23/WUhVNms2bwCM3HF.png"></a></p><h2 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h2><p>从头到尾依次查找。时间复杂度O(n)。</p><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public int find(int[] arr, int target){    int n = arr.length;    int res = -1;    for(int i = 0; i &lt; n; i++){        if(arr[i] == target){            res = i;            break;        }    }        return res;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>如果数组已经排好序，或者根据前期搜索到元素某种星系，能够确定下一步的查找方向，就可以使用二分查找。二分查找的时间复杂度是O(log(n))。</p><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">public int search(int[] nums, int target) {        int lo = 0,hi = nums.length - 1;        int res = -1;        while(lo &lt;= hi){            int mid = lo + (hi - lo) /2;            if( nums[mid] &lt; target){                lo = mid + 1;            }            else if( target &lt; nums[mid]){                hi = mid - 1;            }            else{                res = mid;                break;            }        }        return res;            }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h2><pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">// Definition for a binary tree nodepublic class TreeNode{    int val;    TreeNode left;    TreeNode right;    TreeNode(int x){ val = x;}}class BST{        // serach in BST    public TreeNode searchBST(TreeNode root, int val) {        if( root == null ) return root;                while( root != null){            if( root.val == val ) return root;                        if( root.val &gt; val ){                root = root.left;            }            else{                root = root.right;            }        }                return root;    }       //validation   public boolean isValidBST(TreeNode root) {        if(root == null ) return true;                List&lt;Integer&gt; res  = new ArrayList&lt;&gt;();                inorder(root, res);                for(int i = 0; i &lt; res.size() - 1; i++){            if( res.get(i+ 1) &lt;= res.get(i) )                return false;        }                return true;    }        private void inorder(TreeNode root, List&lt;Integer&gt; res){        if( root == null) return ;                inorder(root.left, res);        res.add(root.val);        inorder(root.right, res);    }        //insert    public TreeNode insertIntoBST(TreeNode root, int val) {        if(root == null)    return new TreeNode(val);        if(val &lt; root.val) root.left = insertIntoBST(root.left, val);        else if (val &gt; root.val)            root.right = insertIntoBST(root.right, val);        elsex.val = val;        return root;    }}//delete  public TreeNode deleteNode(TreeNode root, int key) {        if(root == null ) return null;                if(key &lt; root.val) root.left = deleteNode(root.left, key);        else if( key &gt; root.val) root.right = deleteNode(root.right, key);        else{            if(root.right == null) return root.left;            if(root.left == null) return root.right;            TreeNode t = root;            root = min(t.right);            root.right = deleteMin(t.right);            root.left = t.left;        }                return root;                }        private TreeNode min(TreeNode root){        if(root.left == null) return root;        else return min(root.left);    }        private TreeNode deleteMin(TreeNode x){        if(x.left == null ) return x.right;        x.left = deleteMin(x.left);        return x;    }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h2><h2 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h2><h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2>]]></content>
+      
+      
       
     </entry>
     

@@ -4,15 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="使用Hexo加Github Pages搭建简洁的个人博客, ryvius">
-    <meta name="description" content="
-系统环境
-Ubuntu 19.04
-Node.js v10.16.3
-npm 6.9.0
-Git 2.20.1
-
-本地安装安装相关工具－－Nodejs, npm及git安装Nodejs及npm使用Ctrl+Alt+T快键键打开终端,先同步">
+    <meta name="keywords" content="docker入门与实践, ryvius">
+    <meta name="description" content="最近在学习的时候经常会看到docker的身影,由是好奇,便查阅了相关资料,发现其实docker更是偏向企业级的应用.比如:web应用,API服务,测试应用等等.一般而言不经常使用的技术即使学了也会很快忘记,这里主要对个人在日常中会使用到的场">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -37,7 +30,7 @@ Git 2.20.1
 
     
 
-    <title>使用Hexo加Github Pages搭建简洁的个人博客 | ryvius</title>
+    <title>docker入门与实践 | ryvius</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -330,12 +323,12 @@ Git 2.20.1
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">使用Hexo加Github Pages搭建简洁的个人博客</h1>
+                    <h1 class="description center-align post-title">docker入门与实践</h1>
                 </div>
             </div>
         </div>
@@ -449,12 +442,45 @@ Git 2.20.1
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/docker/">
+                                <span class="chip bg-color">docker</span>
+                            </a>
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%BF%90%E7%BB%B4/">
+                                <span class="chip bg-color">运维</span>
+                            </a>
+                        
+                            <a href="/tags/cs231n/">
+                                <span class="chip bg-color">cs231n</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="post-category">
+                                开发环境搭建
+                            </a>
+                        
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/docker/" class="post-category">
+                                docker
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -463,7 +489,7 @@ Git 2.20.1
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-08-17
+                    2020-04-13
                 </div>
                 
 
@@ -472,14 +498,14 @@ Git 2.20.1
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -502,110 +528,70 @@ Git 2.20.1
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/18/fLGDlUiYqtQ1HkI.jpg"><img src="https://i.loli.net/2019/08/18/fLGDlUiYqtQ1HkI.jpg"></a></p>
-<h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><ul>
-<li>Ubuntu 19.04</li>
-<li>Node.js v10.16.3</li>
-<li>npm 6.9.0</li>
-<li>Git 2.20.1</li>
-</ul>
-<h2 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h2><h3 id="安装相关工具－－Nodejs-npm及git"><a href="#安装相关工具－－Nodejs-npm及git" class="headerlink" title="安装相关工具－－Nodejs, npm及git"></a>安装相关工具－－Nodejs, npm及git</h3><h4 id="安装Nodejs及npm"><a href="#安装Nodejs及npm" class="headerlink" title="安装Nodejs及npm"></a>安装Nodejs及npm</h4><p>使用<code>Ctrl</code>+<code>Alt</code>+<code>T</code>快键键打开终端,先同步软件仓库</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>sudo apt update</span><br></pre></td></tr></tbody></table>
+                <p>最近在学习的时候经常会看到docker的身影,由是好奇,便查阅了相关资料,发现其实docker更是偏向企业级的应用.比如:web应用,API服务,测试应用等等.一般而言不经常使用的技术即使学了也会很快忘记,这里主要对个人在日常中会使用到的场景做一个总结。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>关于docker的基本命令和使用入门,大家可以看下面的推荐文章.一般介绍Docker技术的时候会提到Linux容器技术,namespace等等底层上的一些名词,不过我并没有学习操作系统相关的知识,所以对这些构架上的不同及其所带来的优点并不理解(以后找个时间得补补相关知识.)就从使用的角度而言,docker就像是一个轻量化的虚拟机.可以十分便捷的打包运行环境,其大多数应用也是基于此。</p>
+<h2 id="搭建linux学习环境"><a href="#搭建linux学习环境" class="headerlink" title="搭建linux学习环境"></a>搭建linux学习环境</h2><p>出于各种各样的原因，或许仅仅是觉得linux比较高级，或许是想搭一个博客，或许是有些软件在liunx只能在linux上运行，或许是觉得linux编程更爽，或许是需要连接到服务器的主机进行某些工作……</p>
+<p>通过ssh连接到一台服务器来作为学习环境是一个选择，但一般会需要一定的费用，而且只有在你有学习的意愿的时候才会去学习，不能创造一个经常接触linux去实践的机会．所以说安装一个基于linux版本的发行系统就是一个不错的选择，对于初学者,推荐ubuntu,现在都9102年了，双系统的安装再也没有了&lt;&lt;鸟哥的linux私房菜&gt;&gt;中的那么复杂，基本一路next即可．而且通过gnome-tweak-tool,及在gome-look中下载各种主题，可以使ubuntu达到十分赏心悦目的程度．但是还有一个问题就是在你还不是特别了解linux系统的时候，也许不知道哪一条命令就把系统给弄崩了，比如著名的<code>rm -rf /</code>.这时候就需要搭建一个耐cao的沙盒系统，这个时候你就可以通过docker来满足你的需求。</p>
+<h3 id="从Docker-Hub-拉取镜像"><a href="#从Docker-Hub-拉取镜像" class="headerlink" title="从Docker Hub 拉取镜像"></a>从Docker Hub 拉取镜像</h3><p>从仓库中抓取镜像的命令格式为：<code>docker image pull library/hello-world</code>这里以常用的ubuntu镜像为例：</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker image pull ubuntu<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>接着，使用以下命令安装nodejs</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>sudo apt install nodejs</span><br></pre></td></tr></tbody></table>
+<p>如果拉取成功，就可以在执行以下命令后看到自己拉取的镜像</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker image ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>最后，检查是否安装成功</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>nodejs -v</span><br></pre></td></tr></tbody></table>
+<h3 id="运行容器中的bash"><a href="#运行容器中的bash" class="headerlink" title="运行容器中的bash"></a>运行容器中的bash</h3><p>在docker中，镜像和容器的关系就好像类和对象一样．我们可以通过<code>docker run</code>命令新建一个容器并启动：</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker run -it ubuntu /bin/bash//成功启动会显示类似下面的字样root@4f9947fb07c1:/# //-it 表示以交互模式打开，这样一个轻量的ubuntu容器就建好了，可以试着运行几个常用的命令root@4f9947fb07c1:/# lsbin   dev  home  lib64  mnt  proc  run   srv  tmp  varboot  etc  lib   media  opt  root  sbin  sys  usr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/PLbryA32Rn7goTj.png"><img src="https://i.loli.net/2019/08/19/PLbryA32Rn7goTj.png"></a></p>
-<p>npm是nodejs的包管理工具，安装的方法与上面类似</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>sudo apt install npm</span><br></pre></td></tr></tbody></table>
+<h3 id="选择容器的保存方式"><a href="#选择容器的保存方式" class="headerlink" title="选择容器的保存方式"></a>选择容器的保存方式</h3><p>如果我们想直接退出刚刚创建的容器，直接在容器中输入<code>exit</code>或者<code>Ctrl</code> + <code>D</code>即可．如果我们想再次进入这个容器，可以先通过下面的命令找到container ID:</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker container ls -a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>同样，可以通过下面的命令检查是否安装成功</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>npm -v</span><br></pre></td></tr></tbody></table>
+<p>再使用<code>docker exec</code>命令进入之前的容器中继续运行：</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker exec -it [ContainerID　OR Container Name] /bin/bash 
+//如果容器已经停止，可以用下面的命令启动容器
+docker container start [ContainerID]
+//如果觉得容器自动生成的名字没有意义，还可以通过下面的方式给容器重命名
+docker rename 原容器名　新容器名
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/UpO7lIRYAzrq1yx.png"><img src="https://i.loli.net/2019/08/19/UpO7lIRYAzrq1yx.png"></a></p>
-<p>当然还可以选用PPA的方式安装最新版本的nodejs及npm.如果可能要使用多个版本的nodejs,则可安装nodejs的版本管理工具NVM．建议在通过这些方式安装前先使用<code>sudo apt remove</code>命令卸载掉已安装的nodejs及npm.</p>
-<p>不过如果只是使用hexo,建议按上面的方式安装就可以了</p>
-<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><p>git是目前最常用的版本管理工具，主要由linus大神开发，在许多地方都会用到．</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>sudo apt install git</span><br></pre></td></tr></tbody></table>
+<p>这样的话，如果我们想要继续运行上一次的容器，就使用<code>docker exec</code>命名．如果玩崩了，就通过命令<code>docker run</code>再从原始镜像新建一个容器。</p>
+<h2 id="搭建深度学习环境"><a href="#搭建深度学习环境" class="headerlink" title="搭建深度学习环境"></a>搭建深度学习环境</h2><p>在数据科学中，如果使用python语言，一般会使用anconda来管理各种python包，管理深度学习相关的包也是同样如此．但一般初次配置都还是有点麻烦的．特别是有时候还会遇到依赖冲突的问题．如果我们通过Dockefile将特定项目需要的模块打包安装使用，这样不仅不会破坏本地的包，而且之后想要启动对应的环境也就只要一条命令就可以了，并且还可以以镜像的形式和他人分享。</p>
+<h3 id="拉取现有的镜像"><a href="#拉取现有的镜像" class="headerlink" title="拉取现有的镜像"></a>拉取现有的镜像</h3><h4 id="选取镜像"><a href="#选取镜像" class="headerlink" title="选取镜像"></a>选取镜像</h4><blockquote>
+<p>当然上面的工作已经有人做了，如果没有特殊要求，就是跟着教程跑跑，他人已经做好的镜像一般是够用的，在深度学习方面，deepo的镜像是比较出名的，基本常用的深度学习框架都有．当然如果你要用百度的paddlepaddle，官网上也有相关镜像．网上还有其他相关镜像，好还是不好，关键还是看个人需求．不过一应俱全也是有缺点的，那就是体积比较到大．将近１２个g（GPU）.</p>
+</blockquote>
+<h4 id="使用juypter-notebook"><a href="#使用juypter-notebook" class="headerlink" title="使用juypter notebook"></a>使用juypter notebook</h4><p>运行下面的命令打开镜像中的juypter notebook</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker run -it --runtime=nvidia --rm -p 8888:8888 -v /home/mywin/kaggle/test:/root ufoym/deepo:all-jupyter jupyter notebook --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token=--notebook-dir='/root'<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>类似的用一下命令检查是否安装成功．</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>git --version</span><br></pre></td></tr></tbody></table>
+<p>需要注意的是 <code>/home/mywin/kaggle/test</code>要换成对应自己宿主机中一个实际存在的文件夹，也就是你juypter notebook脚本的最终保存空间 ,然后就可以通过<code>127.0.0.1:8888</code>打开juypter notebook</p>
+<p>上面的run 有<code>--rm</code>选项，当你退出容器后，容器就会被删除．如果想要保留这个容器，可以去掉这个选项．然后通过下面的命令找到<code>Container ID</code></p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker container ls -a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/KCOuWSERazD9g2Q.png"><img src="https://i.loli.net/2019/08/19/KCOuWSERazD9g2Q.png"></a></p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>在ubuntu19.04版本上，如果按照<a target="_blank" rel="noopener" href="https://hexo.io/">官网</a>的指南,输入命名<code>npm install hexo-cli -g</code>,就会出现下面的报错．</p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/jVm7tshG6eEroYu.png"><img src="https://i.loli.net/2019/08/19/jVm7tshG6eEroYu.png"></a></p>
-<p>这个主要是权限问题，加上<code>sudo</code>即可.即输入下面的命令</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>sudo npm install hexo-cli -g</span><br></pre></td></tr></tbody></table>
+<p>然后找到对应随机生产的名字，给它换一个好记一点的名字。</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker rename randomName meaningfulName<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<ul>
-<li>注：官方其实并不推荐这种做法，更好但也更复杂的方法可以参考<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方的指南</a></li>
-</ul>
-<p>安装时还是会有<code>WARN</code>,但并不影响hexo的安装，可输入下面的命令检查是否安装成功</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>hexo -v</span><br></pre></td></tr></tbody></table>
+<p>之后就可以方便的通过下面的命名来启动或是关闭你的深度学习环境</p>
+<pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">docker container start/stop yourContainerName<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/ixmhkcnRyW74dJe.png"><img src="https://i.loli.net/2019/08/19/ixmhkcnRyW74dJe.png"></a></p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>安装好hexo后，我们可以先在本地测试一下，先创建一个文件夹用于测试：</p>
-<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br></pre></td><td><pre><span>mkdir ~/<span>test</span></span><br><span><span>cd</span> ~/<span>test</span></span><br></pre></td></tr></tbody></table>
+<h3 id="个性化定制"><a href="#个性化定制" class="headerlink" title="个性化定制"></a>个性化定制</h3><p><strong>cs231n的情景:</strong></p>
+<p>cs231n的课程的作业环境，官方推荐Google Cloud平台，虽然要连上需要费一点功夫，但是只要绑定一张信用卡（visa, master之类的），就会送$300美元的代金券，还是听不错的，用来学完这门课应该是足够的．本地官方给的指南是anaconda和virtualenv.anaconda 其实挺方便的，但官方的依赖文件是pip安装所需的requirements.txt,而不是anaconda复制环境直接可以用的.yaml文件，所以需要手动转化一下后在使用．virtualenv不太熟，试过一次也没有成功．需要一提的是依赖中的包，有的用当下的最新版并没有问题，有的用了最新版的包，代码就会报错．</p>
+<p>回归主题，anaconda的方式其实已经错了，当然docker也是可行的．下面就是我基于pythorch的官方镜像拓展出来的cs231n的运行环境的Dockerfile</p>
+<pre class="line-numbers language-Dockerfile" data-language="Dockerfile"><code class="language-Dockerfile">FROM pytorch/pytorchRUN apt-get update 
+COPY requirements.txt .
+RUN apt-get update &amp;&amp;  pip install --upgrade jupyter
+RUN pip install --upgrade matplotlib
+RUN pip install --upgrade -r requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在Dockerfile目录下通过下面的命令构建：</p>
+<pre class="line-numbers language-none"><code class="language-none">docker build -t cs231n .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>创建一个博客系统，并初始化</p>
-<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br></pre></td><td><pre><span>hexo init blog</span><br><span><span>cd</span> blog</span><br><span>npm install</span><br></pre></td></tr></tbody></table>
+<p>中途因为依赖的问题也报了一下错，我采取的措施是，首先删掉了<code>requirement.txt</code>中的<code>site</code>行．</p>
+<p>到了build的时候，由于pythorch需要的包，有些是比requirement.txt中新一点的．所以不能恢复到以前的版本．这里的错误其实是可以忽略的．</p>
+<p>我们可以先找到我们构建的镜像：</p>
+<pre class="line-numbers language-none"><code class="language-none">docker image ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>在本地测试运行效果</p>
-<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br></pre></td><td><pre><span>hexo clean</span><br><span>hexo g</span><br><span>hexo s</span><br></pre></td></tr></tbody></table>
+<p>由于并没有完成我们的构建过程，所以并没有生产对应的镜像名，但并不影响使用，我们可以自己来重命名镜像:</p>
+<pre class="line-numbers language-none"><code class="language-none">docker tag ImageID newName<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>命令行的显示如下：</p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/1iwTGdtrQoxeXUy.png"><img src="https://i.loli.net/2019/08/19/1iwTGdtrQoxeXUy.png"></a></p>
-<p>按住<code>Ctrl</code>键，点击<code>http://localhost:4000</code>,便会在浏览器中打开如下网页，便说明安装成功．</p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/wZBvcy23HXIj4fM.png"><img src="https://i.loli.net/2019/08/19/wZBvcy23HXIj4fM.png"></a></p>
-<h2 id="部署到Github-Pages"><a href="#部署到Github-Pages" class="headerlink" title="部署到Github Pages"></a>部署到Github Pages</h2><p>到<a target="_blank" rel="noopener" href="https://github.com/">github官网</a>,点击Sign Up,根据提示一步步填写即可．需要邮箱验证．</p>
-<h3 id="github账号的申请"><a href="#github账号的申请" class="headerlink" title="github账号的申请"></a>github账号的申请</h3><p>首先新建一个项目</p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/ROA7IGTUf1Yoj8n.png"><img src="https://i.loli.net/2019/08/19/ROA7IGTUf1Yoj8n.png"></a></p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/JReZ4kbqtMjQow8.png"><img src="https://i.loli.net/2019/08/19/JReZ4kbqtMjQow8.png"></a></p>
-<p>注意格式为<code>用户名.github.io</code>,项目创建完成后，点击进入<code>Setting</code>选项</p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/K8EkQz5CZv4gfjX.png"><img src="https://i.loli.net/2019/08/19/K8EkQz5CZv4gfjX.png"></a></p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/L4NbUWralsQtXeo.png"><img src="https://i.loli.net/2019/08/19/L4NbUWralsQtXeo.png"></a></p>
-<p><strong>Source</strong> 一栏选择master分支，再选择一个主题，就可以githubPages的设置．现在你就可以通过<code>https://youname.github.io</code>访问你的github Pages了．（如果想换一个域名，绑定自己的域名，在自己注册的域名服务商添加一条CNAME解析即可）</p>
-<h3 id="设置ssh登录秘钥"><a href="#设置ssh登录秘钥" class="headerlink" title="设置ssh登录秘钥"></a>设置ssh登录秘钥</h3><p>因为我们要将hexo 生产的静态博客内容直接通过ssh推送到github仓库，所以需要首先让github网站接受我们的登录请求．</p>
-<h3 id="本地生成公钥秘钥"><a href="#本地生成公钥秘钥" class="headerlink" title="本地生成公钥秘钥"></a>本地生成公钥秘钥</h3><table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br></pre></td><td><pre><span>git config --global user.name <span>"用户名"</span></span><br><span>git config --global user.email <span>"你的github账户邮箱"</span></span><br><span>ssh-keygen -t rsa -C <span>"你的github账户邮箱"</span></span><br></pre></td></tr></tbody></table>
-
-<p>最后一条命令会在<code>~/.ssh</code>文件夹中生成公钥秘钥文件，接着我们可以使用下面命令查看公钥内容</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></tbody></table>
-
-<p>然后需要我们将公钥粘贴到github中．在<code>Setting</code>选项中打开<code>SSH and GPG keys</code>选项</p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/OWyPFJSH3GsLEgl.png"><img src="https://i.loli.net/2019/08/19/OWyPFJSH3GsLEgl.png"></a></p>
-<p>新建一个Key, 名字随便，内容即为刚刚粘贴的公钥．</p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/EQbhT3tXMg1Bdx8.png"><img src="https://i.loli.net/2019/08/19/EQbhT3tXMg1Bdx8.png"></a></p>
-<p>最后在本地终端中输入如下命令：</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>ssh git@github.com</span><br></pre></td></tr></tbody></table>
-
-<p>如果显示与下面类似，就说明设置成功了．</p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/AzPEXVFZOWgMdG7.png"><img src="https://i.loli.net/2019/08/19/AzPEXVFZOWgMdG7.png"></a></p>
-<h3 id="将本地的Hexo博客内容推送到github仓库"><a href="#将本地的Hexo博客内容推送到github仓库" class="headerlink" title="将本地的Ｈexo博客内容推送到github仓库"></a>将本地的Ｈexo博客内容推送到github仓库</h3><p>当准备正式建立博客站时，需要建立一个正式的文件夹来放正式的blog相关的内容，步骤和测试时一样．</p>
-<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></pre></td><td><pre><span>mkdir ~/myBlog</span><br><span><span>cd</span> ~/myBlog</span><br><span>hexo init blog</span><br><span><span>cd</span> blog</span><br><span>npm install</span><br></pre></td></tr></tbody></table>
-
-<p>同样采用下面的三个命令测试是否安装成功</p>
-<table><tbody><tr><td><pre><span>1</span><br><span>2</span><br><span>3</span><br></pre></td><td><pre><span>hexo clean</span><br><span>hexo g</span><br><span>hexo s</span><br></pre></td></tr></tbody></table>
-
-<p>接着找到blog目录下的<code>_config.yml</code>文件．修改<code>deploy</code>相关内容．<br><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/jsl3aSm6GePE4Zc.png"><img src="https://i.loli.net/2019/08/19/jsl3aSm6GePE4Zc.png"></a></p>
-<p>repository改一下对应的用户名．type对应git, branch 对应master,这里有两个坑需要注意一下．一个是常见的分号<code>:</code>需要为英文状态下的分号<code>:</code>．第二个是<code>:</code>后面要跟一个空格，这个是yaml文件格式的要求．</p>
-<p>修改完成后保存．接着在blog目录下使用<code>hexo d</code>命令，一般会要求输入github的用户名和密码．如果没有任何反应或是报错，可以先安装<code>hexo-deployer-git</code>后</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>npm install hexo-deployer-git --save</span><br></pre></td></tr></tbody></table>
-
-<p>再次推送到github试试．</p>
-<h2 id="Hexo的个性化设置"><a href="#Hexo的个性化设置" class="headerlink" title="Hexo的个性化设置"></a>Hexo的个性化设置</h2><p>经过上面的步骤基本就完成了一个博客的搭建．在本地可以通过<code>hexo new "article_name"</code>新建文章，然后再在blog目录下的<code>source/_posts</code>目录中编辑对应文章的markdown文档，然后再<code>hexo clean &amp;&amp;hexo g</code>生成对应的静态文件．<code>hexo s</code>本地预览．<code>hexo d</code>推送到网站上．这样所有的人就可以通过<code>youname.github.io</code>看到你的文章了（一般其实也就你自己看：）</p>
-<p>简洁，方便．使人将更多的精力放在写作本身上．当然一段时间后，你想稍稍个性化一下自己的博客，使之看起来像是一个实实在在的个人博客，而不是hexo的一个官方demo.下面是一些常用的个性化设置.</p>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>Hexo官方的主题是landscape, 如果想换一下其他主题可以到hexo的官方主题板块去看一看，这里以比较流行的Next主题为例(<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/INSTALLATION.md">官方github链接</a>),</p>
-<p>首先<code>cd</code>到blog目录下．然后用下面的命令将主题文件clone到本地</p>
-<table><tbody><tr><td><pre><span>1</span><br></pre></td><td><pre><span>git <span>clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></tbody></table>
-
-<p>接着修改<code>_config.yaml</code>中的<code>theme</code>修改为<code>next</code>即可．</p>
-<h3 id="添加github-Fork-Me-丝带或Github-Corners"><a href="#添加github-Fork-Me-丝带或Github-Corners" class="headerlink" title="添加github Fork Me 丝带或Github Corners"></a>添加github Fork Me 丝带或Github Corners</h3><p>github丝带的项目在<a target="_blank" rel="noopener" href="https://github.blog/2008-12-19-github-ribbons/">GitHub Ribbons</a>这篇文章中，github　Corners的项目在<a target="_blank" rel="noopener" href="http://tholman.com/github-corners/">GitHub Corners</a>这篇文章中．只要复制一个自己喜欢的样式代码．然后改一下里面的站点地址，再复制到<code>theme/"正在使用的主题"/layout/_layout.swig</code>对应的地方即可．具体位置如下所示：</p>
-<p><a target="_blank" rel="noopener" href="https://i.loli.net/2019/08/19/Colkdw1jqWXa3zR.png"><img src="https://i.loli.net/2019/08/19/Colkdw1jqWXa3zR.png"></a></p>
-<h2 id="背后的工作原理初探"><a href="#背后的工作原理初探" class="headerlink" title="背后的工作原理初探"></a>背后的工作原理初探</h2><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><p><a target="_blank" rel="noopener" href="https://github.com/HarleyWang93/blog/issues/1#">Hexo + GitHub (Coding) Pages 搭建博客</a></p>
-<p><a target="_blank" rel="noopener" href="https://godweiyang.com/2018/04/13/hexo-blog/">超详细Hexo+Github博客搭建小白教程</a></p>
+<p>接着我们便可以通过下面的命令创造容器，测试镜像：</p>
+<pre class="line-numbers language-none"><code class="language-none">docker run --rm -it -p 80:80 -v /home/mywin/kaggle/cs231n:/workspace cs231n jupyter-notebook --no-browser --ip=0.0.0.0 --port=80 --allow-root<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>同样的本地数据卷<code>/home/mywin/kaggle/cs231n</code>换到自己cs231n作业代码所在的目录．我测试了一下自己已完成的knn.ipynb，顺利通过。</p>
 
                 
             </div>
@@ -632,7 +618,7 @@ Git 2.20.1
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://bystom.com/2019/08/17/shi-yong-hexo-jia-github-pages-da-jian-jian-ji-de-ge-ren-bo-ke/">http://bystom.com/2019/08/17/shi-yong-hexo-jia-github-pages-da-jian-jian-ji-de-ge-ren-bo-ke/</a>
+                    <a href="http://bystom.com/2020/04/13/docker-ru-men-yu-shi-jian/">http://bystom.com/2020/04/13/docker-ru-men-yu-shi-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -669,7 +655,27 @@ Git 2.20.1
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/docker/">
+                                    <span class="chip bg-color">docker</span>
+                                </a>
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%BF%90%E7%BB%B4/">
+                                    <span class="chip bg-color">运维</span>
+                                </a>
+                            
+                                <a href="/tags/cs231n/">
+                                    <span class="chip bg-color">cs231n</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -719,13 +725,13 @@ Git 2.20.1
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/09/21/pai-xu-suan-fa-zong-jie/">
+                <a href="/2020/05/13/suan-fa-ti-yi-ban-de-jie-ti-si-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="排序算法总结">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="算法题一般的解题思路">
                         
-                        <span class="card-title">排序算法总结</span>
+                        <span class="card-title">算法题一般的解题思路</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -736,7 +742,7 @@ Git 2.20.1
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-09-21
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-13
                         </span>
                         <span class="publish-author">
                             
@@ -761,16 +767,12 @@ Git 2.20.1
                         <span class="chip bg-color">算法</span>
                     </a>
                     
-                    <a href="/tags/Leetcode/">
-                        <span class="chip bg-color">Leetcode</span>
-                    </a>
-                    
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/%E6%8E%92%E5%BA%8F/">
-                        <span class="chip bg-color">排序</span>
+                    <a href="/tags/%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/">
+                        <span class="chip bg-color">解题思路</span>
                     </a>
                     
                 </div>
@@ -781,16 +783,16 @@ Git 2.20.1
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/08/17/shi-yong-hexo-jia-github-pages-da-jian-jian-ji-de-ge-ren-bo-ke/">
+                <a href="/2020/01/25/guan-yu-wu-han-xin-xing-fei-yan-de-yi-xie-shu-xue-mo-xing-ji-yu-ce/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="使用Hexo加Github Pages搭建简洁的个人博客">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="关于武汉新型肺炎的一些数学模型及预测">
                         
-                        <span class="card-title">使用Hexo加Github Pages搭建简洁的个人博客</span>
+                        <span class="card-title">关于武汉新型肺炎的一些数学模型及预测</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -801,17 +803,40 @@ Git 2.20.1
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            ryviuszero
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
+                                </a>
+                            
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="post-category">
+                                    数据分析
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%A2%84%E6%B5%8B/">
+                        <span class="chip bg-color">预测</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E/">
+                        <span class="chip bg-color">新冠肺炎</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
