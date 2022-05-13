@@ -6,7 +6,7 @@
   <link href="http://bystom.com/atom.xml" rel="self"/>
   
   <link href="http://bystom.com/"/>
-  <updated>2022-05-13T02:52:37.105Z</updated>
+  <updated>2022-05-13T04:08:22.295Z</updated>
   <id>http://bystom.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://bystom.com/1970/01/01/hello-world/"/>
-    <id>http://bystom.com/1970/01/01/hello-world/</id>
-    <published>1970-01-01T00:00:00.000Z</published>
-    <updated>2022-05-13T02:52:37.105Z</updated>
+    <link href="http://bystom.com/2022/04/25/hello-world/"/>
+    <id>http://bystom.com/2022/04/25/hello-world/</id>
+    <published>2022-04-24T16:00:00.000Z</published>
+    <updated>2022-05-13T04:08:22.295Z</updated>
     
     
       
@@ -29,6 +29,97 @@
         
         
     <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://bystom.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="demo" scheme="http://bystom.com/tags/demo/"/>
+    
+    <category term="算法" scheme="http://bystom.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法题一般的解题思路</title>
+    <link href="http://bystom.com/2020/05/13/suan-fa-ti-yi-ban-de-jie-ti-si-lu/"/>
+    <id>http://bystom.com/2020/05/13/suan-fa-ti-yi-ban-de-jie-ti-si-lu/</id>
+    <published>2020-05-13T04:08:26.000Z</published>
+    <updated>2022-05-13T05:21:48.886Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;什么是算法&quot;&gt;&lt;a href=&quot;#什么是算法&quot; class=&quot;headerlink&quot; title=&quot;什么是算法&quot;&gt;&lt;/a&gt;什么是算法&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;In mathematics and computer science, an</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="http://bystom.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="Leetcode" scheme="http://bystom.com/categories/%E7%AE%97%E6%B3%95/Leetcode/"/>
+    
+    
+    <category term="算法" scheme="http://bystom.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="解题思路" scheme="http://bystom.com/tags/%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/"/>
+    
+    <category term="Java" scheme="http://bystom.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于武汉新型肺炎的一些数学模型及预测</title>
+    <link href="http://bystom.com/2020/01/25/guan-yu-wu-han-xin-xing-fei-yan-de-yi-xie-shu-xue-mo-xing-ji-yu-ce/"/>
+    <id>http://bystom.com/2020/01/25/guan-yu-wu-han-xin-xing-fei-yan-de-yi-xie-shu-xue-mo-xing-ji-yu-ce/</id>
+    <published>2020-01-25T05:22:27.000Z</published>
+    <updated>2022-05-13T06:50:25.070Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一-英国伦敦帝国理工的报告&quot;&gt;&lt;a href=&quot;#一-英国伦敦帝国理工的报告&quot; class=&quot;headerlink&quot; title=&quot;一. 英国伦敦帝国理工的报告&quot;&gt;&lt;/a&gt;一.</summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="http://bystom.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="数据分析" scheme="http://bystom.com/categories/%E9%9A%8F%E7%AC%94/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="python" scheme="http://bystom.com/tags/python/"/>
+    
+    <category term="预测" scheme="http://bystom.com/tags/%E9%A2%84%E6%B5%8B/"/>
+    
+    <category term="新冠肺炎" scheme="http://bystom.com/tags/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Hexo加Github Pages搭建简洁的个人博客</title>
+    <link href="http://bystom.com/2019/08/17/shi-yong-hexo-jia-github-pages-da-jian-jian-ji-de-ge-ren-bo-ke/"/>
+    <id>http://bystom.com/2019/08/17/shi-yong-hexo-jia-github-pages-da-jian-jian-ji-de-ge-ren-bo-ke/</id>
+    <published>2019-08-17T06:54:08.000Z</published>
+    <updated>2022-05-13T07:48:24.884Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://i.loli.net/2019/08/18/fLGDlUiYqtQ1HkI.jpg&quot;&gt;&lt;img src=&quot;https://i.loli.net/2019/08/18/fLGDlUiYqtQ1HkI.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2</summary>
         
       
     
