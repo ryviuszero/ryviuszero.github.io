@@ -1,18 +1,11 @@
 ---
 layout: page
-title: About
+title: 关于
 permalink: /about/
+lang: zh
+translation_key: about
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+你好，我是 **ryviuszero**。这里记录编程学习、技术笔记和一些实践总结。
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+如果你希望查看英文内容，可以点击页面顶部的 **EN** 切换。

@@ -1,6 +1,10 @@
 ---
 layout: post
+title: Perlin Noise 原理与实现
 date:   2025-11-07 16:34:01 +0800
+lang: zh
+permalink: /zh/posts/perlin-noise/
+translation_key: perlin-noise
 ---
 
 > "自然界中没有真正的随机，只有我们尚未理解的规律。" —— Perlin Noise 的哲学
