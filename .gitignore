@@ -3,3 +3,9 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+.DS_Store
+Thumbs.db
+.gem
+.gem-spec-cache
+.bundle-home
+.bundle-cache
