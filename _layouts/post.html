@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.author -%}
+        &bull; <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}
+    </p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+
+<script type="module">
+  const mermaidBlocks = Array.from(new Set(document.querySelectorAll([
+    "pre > code.language-mermaid",
+    "pre > code[data-lang='mermaid']",
+    ".language-mermaid pre > code"
+  ].join(","))));
+
+  if (mermaidBlocks.length > 0) {
+    const mermaid = (await import("https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs")).default;
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: "default",
+      securityLevel: "strict"
+    });
+
+    mermaidBlocks.forEach((block) => {
+      const wrapper = document.createElement("div");
+      const container = block.parentElement.closest(".language-mermaid.highlighter-rouge, figure.highlight") || block.parentElement;
+      wrapper.className = "mermaid";
+      wrapper.textContent = block.textContent;
+      container.replaceWith(wrapper);
+    });
+
+    await mermaid.run({
+      querySelector: ".mermaid"
+    });
+  }
+</script>
