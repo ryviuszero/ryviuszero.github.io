@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building Complex Projects with Codex: Pitfalls I Hit and What Actually Worked"
+title: "After Building a Complex Project with Codex: A Personal Retrospective"
 date:   2026-05-22 00:00:00 +0800
 lang: en
 permalink: /en/posts/codex-complex-project-development/
@@ -9,7 +9,7 @@ translation_key: codex-complex-project-development
 
 ## Introduction: Written for Myself One Month Ago
 
-After bringing Fast Sub to its current stage, I finally feel able to answer a question I kept asking myself a month ago: if you really want to use tools like Codex or Claude Code to build a complete project, how should you actually do it?
+After bringing Fast Sub to its current stage, I finally feel able to answer a question I kept asking myself a month ago: if I really want to use tools like Codex or Claude Code to build a complete project, how would I actually do it?
 
 Back then, I wanted to find an article or video that showed a real project built from zero to something releasable with AI coding tools. Not a ten-minute demo, not a "type one sentence and generate an app" showcase, but a slightly complex real project: changing requirements, architecture tradeoffs, refactoring, testing, UI, packaging, QA, and cleanup before open sourcing. I looked around and found very little that I could actually reference.
 
@@ -29,37 +29,37 @@ flowchart LR
   D --> E["Release readiness<br/>Packaging, QA, and open source cleanup"]
 ```
 
-After going through it myself, I now understand why this kind of experience is hard to compress into a short "tutorial." Many articles eventually turn into distilled methodology. They look correct, but when you actually start a project, you still do not know what to do first, when to stop, or where human judgment is required.
+After going through it myself, I now understand why this kind of experience is hard to compress into a short "tutorial." Many articles eventually turn into distilled methodology. They look correct, but when I actually start a project, I still get stuck on what to do first, when to stop, and which parts require my own judgment.
 
-So this article is more like a note to myself from one month ago. It is not meant to prove how powerful Codex is, nor to claim that AI can replace all development work. On the contrary, my biggest takeaway is this: the stronger AI coding tools become, the more you need your own process. Otherwise, they can write very fast, but they can also pull the project off course very fast.
+So this article is more like a note to myself from one month ago. It is not meant to prove how powerful Codex is, nor to claim that AI can replace all development work. After this round, I simply have a more concrete feeling for what it means to move a project forward together with AI.
 
 I am still figuring this out myself. What follows is definitely not a standard answer. More accurately, it is a set of temporary lessons I learned by building Fast Sub.
 
-## 1. My Biggest Shift: I No Longer Treat AI Coding as Autopilot
+## 1. After This Project, My View of AI Coding Changed
 
-When I first started using AI to write code, it was easy to fall into an illusion: as long as I described the requirement clearly, it could keep driving forward.
+When I first started using AI to write code, it was easy to fall into an illusion: as long as I described the requirement clearly, I could hand the rest over to it.
 
-For temporary scripts, that feeling is often true. You say you want to process a file, call an API, or generate some test data. It writes the code, you run it, fix a few small issues, and the task is done.
+For temporary scripts, that feeling is often true. I say I want to process a file, call an API, or generate some test data. It writes the code, I run it, fix a few small issues, and the task is done.
 
-But Fast Sub was not that kind of project. It started as a Python CLI, then added a Go product core, daemon/job API, Electron desktop app, packaging, model downloads, real providers, QA smoke tests, and open source documentation. Once the project reached that scale, it became increasingly obvious to me that AI coding is not autopilot.
+But Fast Sub was not that kind of project. It started as a Python CLI, then added a Go product core, daemon/job API, Electron desktop app, packaging, model downloads, real providers, QA smoke tests, and open source documentation. Once the project reached that scale, it became increasingly obvious to me that I could not treat AI coding as hands-off delegation.
 
-It is more like a collaborator with strong execution ability and broad knowledge, but one that badly needs context and boundaries. If you tell it, "For now, only build the mock; do not connect to the real daemon," it can execute that well. If you tell it, "This JSON schema and these exit codes must not be broken," it will try to respect that. But if those constraints exist only in your head, or are scattered in chat history from several days ago, it will eventually forget.
+It is more like a collaborator with strong execution ability and broad knowledge, but one that badly needs context and boundaries. If I tell it, "For now, only build the mock; do not connect to the real daemon," it can execute that well. If I tell it, "This JSON schema and these exit codes must not be broken," it will try to respect that. But if those constraints exist only in my head, or are scattered in chat history from several days ago, it will eventually forget.
 
 I kept coming back to one sentence:
 
 > Complexity does not disappear. It only moves somewhere else.
 
-If you do not control scope during the MVP stage, complexity moves into rework later. If you do not freeze context in documentation, complexity moves into the cost of explaining things in every new conversation. If you do not expose problems during testing and QA, complexity moves to the moment when real users try the product.
+If I do not control scope during the MVP stage, complexity moves into rework later. If I do not freeze context in documentation, complexity moves into the cost of explaining things in every new conversation. If I do not expose problems during testing and QA, complexity moves to the moment when real users try the product.
 
-That is how I now think about Codex: it is not a driver replacing you behind the wheel. It is more like a very capable teammate. You need to give it a map, boundaries, acceptance criteria, and you also need to know when to hit the brakes.
+That is how I now think about Codex: it is not an automatic system that can cover everything for me. It is more like a very capable teammate. I need to give it context, boundaries, and acceptance criteria, and I also need to know when to pause and rethink.
 
-## 2. MVP: Close the Smallest Loop First, Do Not Build the Whole System Up Front
+## 2. MVP: I Eventually Came Back to the Smallest Loop
 
 When I say MVP here, I do not mean a formal product concept. I simply mean the smallest version that can run through the core flow.
 
 When starting from zero, I also had the impulse to think: since AI can write code so fast, maybe I can plan the whole system from the beginning. Features, architecture, documentation, tests, UI, all done at once.
 
-Later I found this unrealistic for a personal project. Mature teams can invest heavily in upfront design because they have people, review processes, experience, and relatively stable requirement inputs. But for personal projects, many things only become clear while building. AI can help you discuss options, but it cannot make all product judgments for you.
+Later I found this unrealistic for a personal project. Mature teams can invest heavily in upfront design because they have people, review processes, experience, and relatively stable requirement inputs. But for personal projects, many things only become clear while building. AI can help me discuss options, but it cannot make all product judgments for me.
 
 Fast Sub's path basically emerged while building:
 
@@ -68,19 +68,19 @@ Fast Sub's path basically emerged while building:
 3. Then build the Electron UI, using a mock-first approach instead of rushing into the real backend.
 4. Finally, enter packaging, real smoke tests, QA, and open source cleanup.
 
-Looking back, this path was not elegant, but it fit a personal project well. Each stage answered one question: can the core capability run? Should the engineering boundary change? What is still missing for real user usage?
+Looking back, this path was not elegant, but it fit a personal project well. Each stage answered one question: can the core capability run? Does the engineering boundary need to change? What is still missing for real user usage?
 
-But MVP does not mean letting AI start coding immediately. This is a trap I think beginners are especially likely to fall into. Claude Code and Codex are both very eager to start writing code after you describe a requirement. They are almost too proactive. If you are writing a temporary script, that is fine. But for a somewhat serious project, this is exactly where things can start going out of control.
+But MVP does not mean letting AI start coding immediately. This is a trap I almost fell into myself. Claude Code and Codex are both very eager to start writing code after I describe a requirement. They are almost too proactive. If I am writing a temporary script, that is fine. But for a somewhat serious project, this is exactly where things can start going out of control.
 
 I later started by asking AI to do research first: search similar projects, analyze existing approaches, compare technology stacks, list risks, and generate an initial MVP document. During this process, I would paste in materials I found, and I would also ask another model to review it from a different angle. For example, I might ask it to act like a senior architect and check whether the MVP is overdesigned; or the opposite, ask it to identify places where the plan is too optimistic.
 
-There is nothing magical about the prompt here. At least as of 2026-05-22, my feeling is that instead of worshiping a particular incantation, it is better to clearly explain the requirement, constraints, reference projects, and your own questions. When necessary, you should definitely ask AI to look things up online. Codex can sometimes produce outdated Next.js, GitHub Actions, or Node version configurations. If you do not check these, they may become strange warnings or build failures later.
+There is nothing magical about the prompt here. At least as of 2026-05-22, my feeling is that instead of worshiping a particular incantation, it is better to clearly explain the requirement, constraints, reference projects, and my own questions. For dependency versions, GitHub Actions, Node configuration, and similar details, I later tended to ask AI to verify them online. Otherwise it can occasionally produce outdated answers, which later turn into strange warnings or build failures.
 
-After the MVP document is ready, I ask AI to act as a project manager and split the project into several rounds. Each round must clearly state its goal, scope, and acceptance criteria. Execution then becomes much simpler: refine the round document, create a branch, implement, and finally validate according to the document.
+After the MVP document is ready, I ask AI to act as a project manager and split the project into several rounds. Each round states its goal, scope, and acceptance criteria. Execution then becomes much simpler: refine the round document, create a branch, implement, and finally validate according to the document.
 
 This step looks slow, but it saves time later.
 
-## 3. SPEC and Documentation: Do Not Let AI Improvise in Ambiguous Requirements
+## 3. SPEC and Documentation: I Started Writing Down the Ambiguous Parts First
 
 When coding with AI, it is easy to treat the prompt as the requirement document. But in complex projects, prompts are too lightweight.
 
@@ -88,25 +88,25 @@ A prompt is more like a verbal handoff. It can start a task, but it cannot carry
 
 In the later Electron development of Fast Sub, I basically switched to specs-driven work. Round 11 was the Electron mock-first shell. Round 12 connected the Go daemon. Round 13 focused on productization and release readiness. Each round had a corresponding document that stated what this round would do, what it would not do, which contracts it would affect, and how it would be accepted.
 
-This matters a lot for AI, because AI is very good at "while I am here." You ask it to fix a UI issue, and it may also adjust state management. You ask it to add a daemon API, and it may also adjust the renderer contract. Often it is not trying to misbehave. It is simply judging from local context that "this is more reasonable." But in a project, not everything that is locally reasonable can be changed: CLI arguments, JSON schemas, exit codes, provider contracts, and remote upload confirmation flows are examples.
+This matters a lot for AI, because AI is very good at "while I am here." I ask it to fix a UI issue, and it may also adjust state management. I ask it to add a daemon API, and it may also adjust the renderer contract. Often it is not trying to misbehave. It is simply judging from local context that "this is more reasonable." But in a project, not everything that is locally reasonable can be changed: CLI arguments, JSON schemas, exit codes, provider contracts, and remote upload confirmation flows are examples.
 
-To AI, code is just code. To the project, some code is actually a contract. Once it changes, users, tests, UI, and documentation may all break. This is especially true when working on boundaries like a CLI, daemon API, or provider. You cannot let AI treat "this looks more reasonable" as "it is okay to change public behavior."
+To AI, code is just code. To the project, some code is actually a contract. Once it changes, users, tests, UI, and documentation may all break. This is especially true when working on boundaries like a CLI, daemon API, or provider. I cannot let AI treat "this looks more reasonable" as "it is okay to change public behavior."
 
-So in a SPEC, what I care about most is not only "what to do," but "what not to do."
+So in a SPEC, what I later cared about most was not only "what to do," but "what not to do."
 
 For example, Round 11 explicitly did not connect to the real daemon and did not call real ffmpeg, the Python worker, or provider runtimes. Round 12 was when the real daemon was connected. Round 13 focused on packaging, diagnostics, tests, and release quality, without introducing new core business architecture.
 
-With these boundaries, AI's freedom actually becomes more stable. It knows this round should only solve this round's problems. When it finds something out of scope, it records a follow-up instead of immediately changing it.
+With these boundaries, AI's freedom actually becomes more stable. It is more likely to understand that this round should only solve this round's problems. When it finds something out of scope, it records a follow-up instead of immediately changing it.
 
 My current habit is: before a large implementation, write a SPEC, review it myself, then ask another conversation or model to review it. The goal is not to make the document beautiful. The goal is to expose ambiguity before touching code.
 
-## 4. Context Management: Move Project Memory Out of the Chat Window
+## 4. Context Management: I Stopped Relying Only on Chat History
 
 The first few rounds of Fast Sub were mostly driven by conversations. At the beginning, this was fine. The project was still small, and AI could keep up. But as development continued, the problems became obvious.
 
-The most typical case was that the project manager conversation forgot its own role and started editing code. Some conversations forgot what had already been completed, or did not know which contracts were untouchable. If you reminded it once, it would return to normal; after a while, it might drift again.
+The most typical case was that the project manager conversation forgot its own role and started editing code. Some conversations forgot what had already been completed, or did not know which contracts were untouchable. If I reminded it once, it would return to normal; after a while, it might drift again.
 
-This is not because one specific model is especially bad. LLM conversations are simply not stable memory. Tools like Claude Code and Codex help maintain context, but context is still limited. Long conversations get compressed, details are lost, and lots of no-longer-important information gets mixed in.
+This is not because one specific model is especially bad. LLM conversations are simply not stable memory. Tools like Claude Code and Codex help me maintain context, but context is still limited. Long conversations get compressed, details are lost, and lots of no-longer-important information gets mixed in.
 
 Later I referred to JS Mastery's [The Six-File Context System](https://www.youtube.com/watch?v=14RP8liACqo), as well as the corresponding [Six-File Context System Guide download page](https://jsmastery.com/waitlist/six-file-context). I did not copy it exactly. Instead, I adapted it into a set of documents that fit Fast Sub at the time. For the UI stage, the most important ones were:
 
@@ -117,7 +117,7 @@ Later I referred to JS Mastery's [The Six-File Context System](https://www.youtu
 - `ai-workflow-rules.md`: AI workflow rules.
 - `project-tracker.md`: current progress, decisions, and next steps.
 
-These files were not there to make the repository look more "professional." They were there so a new conversation could pick up the project. Before an implementation conversation starts, it reads these context files. After code changes are done, the tracker is updated. Project memory no longer depends entirely on a single chat window.
+These files were not there to make the repository look more "professional." They were there so a new conversation could pick up the project. Before an implementation conversation starts, I ask it to read these context files. After code changes are done, the tracker is updated. Project memory no longer depends entirely on a single chat window.
 
 The context structure I ended up with looks roughly like this:
 
@@ -136,13 +136,13 @@ flowchart TD
 
 This change helped a lot later. With these files in place, Codex's plans became noticeably closer to the actual project state, and it forgot constraints less often. The cost was that it spent a bit longer thinking each time, and the answers felt less lightweight. For a complex project, I am willing to pay that cost.
 
-I also realized that context management does not mean stuffing everything into AI. Too little context causes misunderstanding. Too much context slows it down and may make it miss the point. A better approach is to put long-term stable information in project documents, and current-stage information in SPECs and the tracker.
+I also realized that context management does not mean stuffing everything into AI. Too little context causes misunderstanding. Too much context slows it down and may make it miss the point. For me, the smoother approach is to put long-term stable information in project documents, and current-stage information in SPECs and the tracker.
 
-## 5. Multi-Conversation Collaboration: Separate PM, Implementation, Review, and QA
+## 5. Multi-Conversation Collaboration: I Split the Roles Apart
 
 I now rarely put a complex project into a single chat window.
 
-The longer a single conversation gets, the more it turns into a stew. Planning, implementation, review, QA, and release documentation all mixed together make it difficult for AI to maintain a stable role. You just asked it to finish an implementation round, then asked it to review its own code, then asked it to plan the next round. The contexts easily get tangled.
+The longer a single conversation gets, the more it turns into a stew. Planning, implementation, review, QA, and release documentation all mixed together make it difficult for AI to maintain a stable role. I might ask it to finish an implementation round, then review its own code, then plan the next round. The contexts easily get tangled.
 
 Later, I kept several standing conversations:
 
@@ -152,7 +152,7 @@ Later, I kept several standing conversations:
 
 Actual implementation happens in a new conversation. The implementation conversation receives only the SPEC and context needed for the current round, without carrying too much historical baggage.
 
-At first this felt slightly cumbersome, but later it became much more comfortable. The PM conversation acts more like a project state machine, responsible for clarifying work. The implementation conversation is more like a temporary worker that takes a clear task and executes. The review conversation focuses on finding problems. Handoffs between conversations do not rely on "do you remember?" but on documents and the tracker.
+At first this felt slightly cumbersome, but later it became much more comfortable. The PM conversation acts more like a project state machine, responsible for clarifying work. The implementation conversation is more like a temporary worker that takes a clear task and executes. The review conversation focuses on finding problems. Handoffs between conversations do not rely on "remember this?" but on documents and the tracker.
 
 For example: the PM conversation first generates the Round 12 daemon integration spec; the Plan conversation reviews it, focusing on daemon API, secrets, SSE, and configuration write boundaries; the implementation conversation connects the real daemon client according to the spec; the Review conversation checks contracts, privacy, and test gaps; finally, the QA conversation organizes issues found during real desktop testing and writes results back to the tracker. Each conversation carries one type of cognitive load.
 
@@ -168,23 +168,23 @@ flowchart LR
   F --> A
 ```
 
-Some rounds can be split further into multiple worktrees and developed in parallel. I once tried up to 4 worktrees at the same time, and the efficiency was genuinely high. But there is one precondition: the tasks must be cut cleanly enough. If several branches all modify the same state management or the same contract, merging becomes painful.
+Some rounds can be split further into multiple worktrees and developed in parallel. I once tried up to 4 worktrees at the same time, and the efficiency was genuinely high. But there is one precondition: the tasks need to be cut cleanly enough. If several branches all modify the same state management or the same contract, merging becomes painful.
 
 My workflow is basically to keep the main branch clean, rebase feature branches onto the primary branch (`main` / `master`), then merge with fast-forward. This makes review and rollback clearer. This may not fit everyone, but for a personal project, it was easier to control than having many branches merge into each other.
 
 If each conversation is also given some dedicated skills, it starts to feel a bit like agents. But I do not want to make it sound mystical. For code development, simply making different conversations responsible for different roles already solves many problems.
 
-## 6. Code Quality and Refactoring: Tests Are Guardrails, Not Decorations
+## 6. Code Quality and Refactoring: Tests Became How I Decided Whether It Was Safe to Continue
 
 After using Codex, it became hard for me to review every generated line one by one. Not because I did not want to, but because it was not realistic. AI generates code too fast. Once the project becomes complex, human line-by-line review quickly falls behind.
 
-So what should we do? My feeling is that tests must become guardrails, not decorations.
+My feeling later was that tests cannot be decorative. They have to participate in deciding whether a change broke something.
 
-In Fast Sub, many things must not be changed casually: CLI command names, arguments, JSON schemas, exit codes, provider contracts, daemon APIs, secret redaction, and remote upload confirmation. Verbal reminders are not enough. These must be written into documentation and covered by tests as much as possible.
+In Fast Sub, many things cannot be changed casually: CLI command names, arguments, JSON schemas, exit codes, provider contracts, daemon APIs, secret redaction, and remote upload confirmation. Verbal reminders are not enough. I need to write these into documentation and cover them by tests as much as possible.
 
 The validation I ran differed by stage. On the Python side, there were ruff, mypy, and pytest. On the Go side, there was go test. On the Electron side, there were typecheck, unit tests, build, and smoke tests. By Round 13, I also needed packaged smoke, installer smoke, real local provider/file smoke, long-task cancellation smoke, screenshot baselines, and license inventory.
 
-But automated tests are not everything. You still need to manually run the core flow. This is especially true for desktop apps. Many problems only appear when you actually click through the app: whether a button is clickable, whether a long filename breaks a dialog, whether error messages are understandable, whether task state jumps after switching away and back, whether GPU processes remain after canceling a job.
+But automated tests are not everything. I still need to manually run the core flow. This is especially true for desktop apps. Many problems only appear when I actually click through the app: whether a button is clickable, whether a long filename breaks a dialog, whether error messages are understandable, whether task state jumps after switching away and back, whether GPU processes remain after canceling a job.
 
 I also hit issues with refactoring.
 
@@ -194,9 +194,9 @@ At first I wanted Codex to refactor everything in one shot based on a reasonable
 
 In the end, I had to point out issues one directory at a time and let Codex make smaller changes. Fortunately, the test coverage was good enough that after each change I could quickly verify whether behavior had been broken.
 
-My view on AI refactoring has become more conservative since then: it is very good at splitting files, extracting types, and organizing modules, but only if you first define what "not broken" means. Without tests, boundaries, and a small-step rhythm, refactoring can easily become another disaster.
+My view on AI refactoring has become more conservative since then: it is very good at splitting files, extracting types, and organizing modules, but only if I first define what "not broken" means. Without tests, boundaries, and a small-step rhythm, refactoring can easily become another disaster.
 
-## 7. UI Prototyping: Mock-First Was the Most Valuable Lesson
+## 7. UI Prototyping: Mock-First Was One of the Better Choices
 
 After the Python and Go parts were completed, UI was what worried me most, because I had almost no experience building a complete desktop UI.
 
@@ -204,9 +204,9 @@ The first time I used Claude Design to generate prototypes, I was honestly stunn
 
 But the shock soon turned into another practical problem: this kind of visual iteration consumes a lot of quota and context. After changing only a few pages, the account quota would already start to feel tight.
 
-Later I downloaded the prototype files and let Codex continue modifying them. One lesson here is important: prototype code alone is not enough. If Codex only sees the code, it is hard for it to reliably reproduce the visual effect. It is much better to also provide screenshots of each prototype page, so it can reference both structure and final appearance.
+Later I downloaded the prototype files and let Codex continue modifying them. One detail I only realized later: prototype code alone is not enough. If Codex only sees the code, it is hard for it to reliably reproduce the visual effect. I later provided screenshots of each prototype page as well, so it could reference both structure and final appearance.
 
-Looking back, there should already be easier ways to do this now. For example, [Open Design](https://opendesigner.io/) can basically be understood as an open source alternative to Claude Design. It connects the design-generation workflow to coding-agent CLIs you already use, including Codex, Claude Code, Cursor, Gemini, OpenCode, and others. That would avoid the back-and-forth I had at the time between Claude Design and Codex, moving prototype files, screenshots, and revision notes around.
+Looking back, there may already be easier ways to do this now. For example, [Open Design](https://opendesigner.io/) can basically be understood as an open source alternative to Claude Design. It connects the design-generation workflow to existing coding-agent CLIs, including Codex, Claude Code, Cursor, Gemini, OpenCode, and others. If I had used something like that at the time, I might not have needed to move prototype files, screenshots, and revision notes back and forth between Claude Design and Codex.
 
 Once the prototype was roughly ready, I did not connect the real backend immediately. I went mock-first.
 
@@ -216,7 +216,7 @@ This later proved very worthwhile. The UI could validate information architectur
 
 If the UI had connected to the real daemon from the beginning, problems would have been mixed together: if a button did not respond, was it a UI state bug, a daemon API bug, or a job event mapping bug? Mock-first removed at least half of that uncertainty.
 
-So if I build a similar project again, I will still mock first. Even if part of the backend is already available, I would rather smooth out the user flow with mocks first, then gradually replace them with real implementation.
+So if I build a similar project again, I will probably still mock first. Even if part of the backend is already available, I would rather smooth out the user flow with mocks first, then gradually replace them with real implementation.
 
 ## 8. QA and Open Source Cleanup: The Last Mile Takes the Most Time
 
@@ -226,11 +226,11 @@ When building command-line tools, I had always wondered: why does wrapping a CLI
 
 After actually building a desktop version myself, I understood. The last mile of UI is extremely fragmented, and many problems are hard to catch ahead of time with automated tests.
 
-For example: is the button where users expect it to be? Will very long batch filenames break the confirmation dialog? Is the error message understandable after a task fails? Does the state jump when a generating task goes to the background and comes back? Are GPU processes left behind after canceling a long task? These are not problems you can confidently solve with one unit test.
+For example: is the button where users expect it to be? Will very long batch filenames break the confirmation dialog? Is the error message understandable after a task fails? Does the state jump when a generating task goes to the background and comes back? Are GPU processes left behind after canceling a long task? These are not problems I can confidently solve with one unit test.
 
 I spent more than a week on this part. Honestly, it was quite draining.
 
-The thing that improved efficiency a bit was building a QA test table. Do not open a new conversation and fix one issue immediately every time you find a problem. Instead, record issues in batches, classify them in batches, and then let Codex handle them by category. This is much more efficient, and it also makes it easier to confirm which issues have been fixed and which still need retesting.
+The thing that improved efficiency a bit was building a QA test table. I stopped opening a new conversation and fixing one issue immediately every time I found a problem. Instead, I recorded issues in batches, classified them in batches, and then let Codex handle them by category. This is much more efficient, and it also makes it easier to confirm which issues have been fixed and which still need retesting.
 
 Late-stage Fast Sub QA covered many scenarios that only fail in real usage:
 
@@ -247,11 +247,11 @@ There is another point I only truly understood later: the packaged app is the re
 
 Before open sourcing, there was another category of cleanup that did not look like coding, but was not small at all: README, CHANGELOG, CONTRIBUTING, SECURITY, LICENSE, third-party dependency license inventory, privacy notes, installation instructions, and troubleshooting documentation.
 
-You also need to clean up things that cannot be public, such as API keys, local machine paths, large model files, large media files, real benchmark output, and temporary build artifacts.
+I also had to clean up things that cannot be public, such as API keys, local machine paths, large model files, large media files, real benchmark output, and temporary build artifacts.
 
-This step is easy to underestimate. For developers, working code can feel like the end. But for external users, documentation, privacy notes, installation instructions, and known limitations are all part of the project's credibility. AI is good at generating a first draft of documentation, but you must review the promises in those docs yourself. Installation instructions, privacy notes, and known limitations in particular cannot be allowed to sound too optimistic.
+I underestimated this step at first. For developers, working code can feel like the end. But for external users, documentation, privacy notes, installation instructions, and known limitations are all part of the project's credibility. AI is good at generating a first draft of documentation, but I still have to review the promises in those docs myself. Installation instructions, privacy notes, and known limitations in particular cannot be allowed to sound too optimistic.
 
-Fast Sub is also local-first, so the privacy boundary must be explicit. Remote providers must not become implicit behavior. Any path that uploads audio or subtitle text must be explicitly selected and confirmed by the user.
+Fast Sub is also local-first, so the privacy boundary has to be explicit. Remote providers must not become implicit behavior. I want any path that uploads audio or subtitle text to be explicitly selected and confirmed by the user.
 
 ## 9. Pitfalls I Hit: Complexity Does Not Disappear, It Only Moves
 
@@ -269,43 +269,43 @@ I also underestimated the difference between packaged apps and real environments
 
 Behind all these pitfalls is the same issue: complexity does not disappear, it only moves.
 
-AI can help you write code faster, but it cannot make complexity vanish. If you do not handle it during requirements, it appears during implementation. If you do not handle it during implementation, it appears during QA. If you do not handle it during QA, it appears in front of users.
+AI can help me write code faster, but it cannot make complexity vanish. Problems I do not handle early will still appear later during implementation, QA, or real usage.
 
 ## 10. If I Did It Again, What I Would Do Earlier
 
-If I were to build Fast Sub again from scratch now, I would not overturn the overall path, but there are several things I would definitely do earlier.
+If I were to build Fast Sub again from scratch now, I would not overturn the overall path, but there are several things I would do earlier.
 
-First, create context files from the beginning. Do not wait until conversations start forgetting things and code starts swelling. Even rough `project-overview`, `architecture`, `code-standards`, and `project-tracker` files are better than relying entirely on chat history.
+First, create context files from the beginning. I would not wait until conversations start forgetting things and code starts swelling. Even rough `project-overview`, `architecture`, `code-standards`, and `project-tracker` files are better than relying entirely on chat history.
 
-Second, define directory structure and code style earlier. Refactoring after early Python files grew large cost more than I expected. AI can help you refactor, but it is not good at absorbing the consequences of "we did not define boundaries earlier" on your behalf.
+Second, define directory structure and code style earlier. Refactoring after early Python files grew large cost more than I expected. AI can help me refactor, but it is not good at absorbing the consequences of "we did not define boundaries earlier" on my behalf.
 
-Third, during the UI prototype stage, organize screenshots, states, and copy more carefully. The rougher the prototype, the more interaction detail you need to patch during QA. Especially for desktop tools, empty states, error states, batch jobs, cancellation, and failed retry flows are best thought through during the mock stage.
+Third, during the UI prototype stage, organize screenshots, states, and copy more carefully. The rougher the prototype, the more interaction detail I need to patch during QA. Especially for desktop tools, I would try to think through empty states, error states, batch jobs, cancellation, and failed retry flows during the mock stage.
 
-Fourth, establish a QA table earlier. Do not wait until last-mile issues explode before systematically recording them. A QA table is not only a test checklist; it is also an input format for collaborating with AI on bug fixes.
+Fourth, establish a QA table earlier. I do not want to wait until last-mile issues explode before systematically recording them. A QA table is not only a test checklist; it is also an input format for collaborating with AI on bug fixes.
 
-Fifth, separate feature work, refactoring, and release work more strictly in every round. AI easily mixes them together, but their acceptance criteria are completely different. For features, you check whether user capability increased. For refactoring, you check whether behavior stayed the same. For release work, you check whether the real environment runs successfully.
+Fifth, separate feature work, refactoring, and release work more strictly in every round. AI easily mixes them together, but their acceptance criteria are completely different. For features, I check whether user capability increased. For refactoring, I check whether behavior stayed the same. For release work, I check whether the real environment runs successfully.
 
-None of these are flashy tricks, but they would have saved me a lot of debt.
+None of these are flashy tricks, but if I had done them earlier, I probably would have carried less debt.
 
-## 11. Conclusion: Look Less for Magic Prompts, Build Your Own Process More
+## 11. Conclusion: After This, I Trust Magic Prompts Less
 
 After building this project with Codex, my view of AI coding changed quite a bit.
 
-I no longer think the key is finding a universal prompt. Prompts are useful, skills are useful, and tools will keep getting stronger. But what complex projects really test is whether you have your own process.
+I no longer think the key is finding a universal prompt. Prompts are useful, skills are useful, and tools will keep getting stronger. But after this project, I feel more clearly that the parts that really consume energy in complex projects are scope control, context, validation, and closing things out.
 
-If you are just starting to use Codex or similar tools for projects, I would suggest beginning with these:
+If I were to turn this experience into a note for myself, I would write down these things:
 
-1. Build an MVP first; do not build the whole system up front.
-2. Write a SPEC before large tasks, especially making clear what not to do.
-3. Put long-term context in project documents, not only in chat history.
-4. Use multiple conversations to separate PM, implementation, review, and QA.
-5. Give every round of changes tests and validation; do not only trust AI saying "done."
-6. Use mock-first for UI, then connect the real backend after the flow is stable.
-7. Record QA issues in batches, fix them in batches, and retest them in batches.
-8. Before open sourcing, do a separate pass for documentation, privacy, licenses, and release notes.
+1. I would build an MVP first, not plan the whole system up front.
+2. Before large tasks, I would write a SPEC, especially making clear what this round will not do.
+3. I would put long-term context in project documents, not only in chat history.
+4. I would continue separating PM, implementation, review, and QA into different conversations.
+5. After each round of changes, I would look at tests and validation results, not only trust AI saying "done."
+6. I would still use mock-first for UI, then connect the real backend after the flow is stable.
+7. I would record QA issues in batches, fix them in batches, and retest them in batches.
+8. Before open sourcing, I would leave separate time for documentation, privacy, licenses, and release notes.
 
-None of this sounds cool, and it is less attractive than a single magical prompt. But these are the things I found genuinely useful this time.
+None of this sounds cool, and it is less attractive than a single magical prompt. But these are the things that stayed with me after this project.
 
-AI coding is not autopilot. It is more like bringing a very capable collaborator into your development process. The clearer your process is, the more it amplifies your ability. The messier your process is, the faster it amplifies the mess.
+AI coding is not something I can hand off and forget. It is more like bringing a very capable collaborator into the development process. The clearer the process is, the more it amplifies human ability. The messier the process is, the faster it amplifies the mess.
 
-That is probably the most honest conclusion I have after hitting these pitfalls.
+That is probably what I most want to tell myself from one month ago after finishing this project.
