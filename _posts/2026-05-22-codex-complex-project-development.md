@@ -10,17 +10,17 @@ translation_key: codex-complex-project-development
 ## 目录
 
 - [开头：写给一个月前的自己](#intro)
-- [1. 做完这个项目后，我对 AI 编程的看法变了](#ai-programming-view)
-- [2. MVP：我后来还是先回到了最小闭环](#mvp-loop)
-- [3. SPEC 和文档：我开始把模糊的地方先写下来](#specs-and-docs)
-- [4. 上下文管理：后来我不再只依赖聊天记录](#context-management)
-- [5. 多对话协作：我把不同角色拆开了](#multi-conversation-workflow)
-- [6. 代码质量和重构：测试成了我判断能不能继续改的依据](#quality-and-refactoring)
-- [7. UI 原型：mock-first 是这次比较值的一步](#mock-first-ui)
-- [8. QA 和开源前收口：最后一公里最花时间](#qa-and-release-readiness)
-- [9. 我踩过的坑：复杂度不会消失，只会转移](#lessons-learned)
-- [10. 如果重来一次，我会提前做什么](#what-i-would-do-earlier)
-- [11. 总结：这次之后，我没那么迷信 prompt 了](#conclusion)
+- [做完这个项目后，我对 AI 编程的看法变了](#ai-programming-view)
+- [MVP：我后来还是先回到了最小闭环](#mvp-loop)
+- [SPEC 和文档：我开始把模糊的地方先写下来](#specs-and-docs)
+- [上下文管理：后来我不再只依赖聊天记录](#context-management)
+- [多对话协作：我把不同角色拆开了](#multi-conversation-workflow)
+- [代码质量和重构：测试成了我判断能不能继续改的依据](#quality-and-refactoring)
+- [UI 原型：mock-first 是这次比较值的一步](#mock-first-ui)
+- [QA 和开源前收口：最后一公里最花时间](#qa-and-release-readiness)
+- [我踩过的坑：复杂度不会消失，只会转移](#lessons-learned)
+- [如果重来一次，我会提前做什么](#what-i-would-do-earlier)
+- [总结：这次之后，我没那么迷信 prompt 了](#conclusion)
 
 ## 开头：写给一个月前的自己 {#intro}
 
@@ -50,7 +50,7 @@ flowchart LR
 
 我自己也还在摸索，下面的内容肯定不是标准答案。更准确地说，它只是我用 Fast Sub 这个项目踩出来的一套阶段性经验。
 
-## 1. 做完这个项目后，我对 AI 编程的看法变了 {#ai-programming-view}
+## 做完这个项目后，我对 AI 编程的看法变了 {#ai-programming-view}
 
 刚开始用 AI 写代码的时候，很容易有一种错觉：只要把需求说清楚，后面就可以交给它自己推进。
 
@@ -68,7 +68,7 @@ flowchart LR
 
 这也是我现在看 Codex 的方式：它不是一个可以替我兜底的全自动系统，更像是一个很强的队友。我得给它上下文、边界、验收标准，也得知道什么时候该暂停下来重新判断。
 
-## 2. MVP：我后来还是先回到了最小闭环 {#mvp-loop}
+## MVP：我后来还是先回到了最小闭环 {#mvp-loop}
 
 我这里说的 MVP，不是一个很正式的产品概念，只是第一个能跑通核心流程的最小版本。
 
@@ -95,7 +95,7 @@ MVP 文档出来后，我会继续让 AI 扮演 project manager，把项目拆�
 
 这一步看起来慢，但它是在帮后面省时间。
 
-## 3. SPEC 和文档：我开始把模糊的地方先写下来 {#specs-and-docs}
+## SPEC 和文档：我开始把模糊的地方先写下来 {#specs-and-docs}
 
 用 AI 编程时，很容易把 prompt 当成需求文档。但复杂项目里，prompt 太轻了。
 
@@ -115,7 +115,7 @@ Fast Sub 后期的 Electron 开发，我基本改成 specs-driven。Round 11 做
 
 我现在的习惯是：大的实现前先写 SPEC，自己审一遍，再让另一个对话或模型审一遍。不是为了写得多漂亮，而是为了在动代码前先把模糊的地方暴露出来。
 
-## 4. 上下文管理：后来我不再只依赖聊天记录 {#context-management}
+## 上下文管理：后来我不再只依赖聊天记录 {#context-management}
 
 Fast Sub 前几轮基本是靠对话推进的。一开始没什么问题，项目还小，AI 也能跟得上。但后面继续做时，问题开始变明显。
 
@@ -153,7 +153,7 @@ flowchart TD
 
 我后来也意识到，上下文管理不是把所有东西都塞给 AI。上下文太少，它会误解；上下文太多，它会变慢，也可能抓不住重点。所以对我来说更顺的方式，是把长期稳定的信息写进项目文档，把当前阶段的信息写进 SPEC 和 tracker。
 
-## 5. 多对话协作：我把不同角色拆开了 {#multi-conversation-workflow}
+## 多对话协作：我把不同角色拆开了 {#multi-conversation-workflow}
 
 我现在不太会把一个复杂项目塞进一个聊天窗口里。
 
@@ -189,7 +189,7 @@ flowchart LR
 
 每个对话再加上一些专属 skills，其实就有点像 agents 了。不过我现在还不想把它说得太玄。对代码开发来说，先做到“不同对话承担不同职责”，已经能解决很多问题。
 
-## 6. 代码质量和重构：测试成了我判断能不能继续改的依据 {#quality-and-refactoring}
+## 代码质量和重构：测试成了我判断能不能继续改的依据 {#quality-and-refactoring}
 
 用 Codex 之后，我很难再逐行 review 每一行代码。不是不想，而是不现实。AI 生成代码的速度太快，项目一复杂，靠人工一行行看，很快就会跟不上。
 
@@ -211,7 +211,7 @@ Python 部分做完后，项目里已经有十几个 Python 文件，有些文�
 
 后来我对 AI 重构的判断变得保守了：它很适合拆文件、抽类型、整理模块，但前提是我先定义什么叫“没改坏”。如果没有测试，没有边界，没有“小步改”的节奏，重构很容易变成另一场灾难。
 
-## 7. UI 原型：mock-first 是这次比较值的一步 {#mock-first-ui}
+## UI 原型：mock-first 是这次比较值的一步 {#mock-first-ui}
 
 Python 和 Go 这部分完成后，我最担心的是 UI。因为我几乎没有完整做过桌面 UI。
 
@@ -233,7 +233,7 @@ Fast Sub 的 Round 11 就是 Electron mock-first shell：先建立 `FastSubClien
 
 所以现在让我再做类似项目，我大概率还是会先 mock。哪怕后端已经有一部分可用，我也更愿意先用 mock 把用户流程走顺，再逐步替换成真实实现。
 
-## 8. QA 和开源前收口：最后一公里最花时间 {#qa-and-release-readiness}
+## QA 和开源前收口：最后一公里最花时间 {#qa-and-release-readiness}
 
 接入真实 daemon worker 后，项目进入了我花时间最多的阶段。
 
@@ -268,7 +268,7 @@ Fast Sub 后期 QA 覆盖了不少“真实使用才会出问题”的场景：
 
 Fast Sub 又是本地优先工具，所以隐私边界得写清楚。远程 provider 不能变成隐式行为，任何上传音频或字幕文本的路径，我都希望它是用户显式选择和确认的。
 
-## 9. 我踩过的坑：复杂度不会消失，只会转移 {#lessons-learned}
+## 我踩过的坑：复杂度不会消失，只会转移 {#lessons-learned}
 
 如果把这次经历压缩成几个坑，大概是这些。
 
@@ -286,7 +286,7 @@ UI 原型早期不够细。后面真实 QA 时，很多交互问题才暴露出�
 
 AI 可以帮我更快写代码，但不能让复杂度消失。有些问题早期不处理，后面还是会在实现、QA 或真实使用时冒出来。
 
-## 10. 如果重来一次，我会提前做什么 {#what-i-would-do-earlier}
+## 如果重来一次，我会提前做什么 {#what-i-would-do-earlier}
 
 如果现在让我从头再做一次 Fast Sub，我不会推翻现在的路线，但有几件事一定会提前做。
 
@@ -302,7 +302,7 @@ AI 可以帮我更快写代码，但不能让复杂度消失。有些问题早�
 
 这些都不是很炫的技巧，但如果一开始就做，我大概能少还不少债。
 
-## 11. 总结：这次之后，我没那么迷信 prompt 了 {#conclusion}
+## 总结：这次之后，我没那么迷信 prompt 了 {#conclusion}
 
 用 Codex 做完这个项目后，我对 AI 编程的看法变了不少。
 

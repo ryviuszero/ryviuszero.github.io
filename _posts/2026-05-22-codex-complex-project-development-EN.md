@@ -35,7 +35,7 @@ So this article is more like a note to myself from one month ago. It is not mean
 
 I am still figuring this out myself. What follows is definitely not a standard answer. More accurately, it is a set of temporary lessons I learned by building Fast Sub.
 
-## 1. After This Project, My View of AI Coding Changed
+## After This Project, My View of AI Coding Changed
 
 When I first started using AI to write code, it was easy to fall into an illusion: as long as I described the requirement clearly, I could hand the rest over to it.
 
@@ -53,7 +53,7 @@ If I do not control scope during the MVP stage, complexity moves into rework lat
 
 That is how I now think about Codex: it is not an automatic system that can cover everything for me. It is more like a very capable teammate. I need to give it context, boundaries, and acceptance criteria, and I also need to know when to pause and rethink.
 
-## 2. MVP: I Eventually Came Back to the Smallest Loop
+## MVP: I Eventually Came Back to the Smallest Loop
 
 When I say MVP here, I do not mean a formal product concept. I simply mean the smallest version that can run through the core flow.
 
@@ -80,7 +80,7 @@ After the MVP document is ready, I ask AI to act as a project manager and split 
 
 This step looks slow, but it saves time later.
 
-## 3. SPEC and Documentation: I Started Writing Down the Ambiguous Parts First
+## SPEC and Documentation: I Started Writing Down the Ambiguous Parts First
 
 When coding with AI, it is easy to treat the prompt as the requirement document. But in complex projects, prompts are too lightweight.
 
@@ -100,7 +100,7 @@ With these boundaries, AI's freedom actually becomes more stable. It is more lik
 
 My current habit is: before a large implementation, write a SPEC, review it myself, then ask another conversation or model to review it. The goal is not to make the document beautiful. The goal is to expose ambiguity before touching code.
 
-## 4. Context Management: I Stopped Relying Only on Chat History
+## Context Management: I Stopped Relying Only on Chat History
 
 The first few rounds of Fast Sub were mostly driven by conversations. At the beginning, this was fine. The project was still small, and AI could keep up. But as development continued, the problems became obvious.
 
@@ -138,7 +138,7 @@ This change helped a lot later. With these files in place, Codex's plans became 
 
 I also realized that context management does not mean stuffing everything into AI. Too little context causes misunderstanding. Too much context slows it down and may make it miss the point. For me, the smoother approach is to put long-term stable information in project documents, and current-stage information in SPECs and the tracker.
 
-## 5. Multi-Conversation Collaboration: I Split the Roles Apart
+## Multi-Conversation Collaboration: I Split the Roles Apart
 
 I now rarely put a complex project into a single chat window.
 
@@ -174,7 +174,7 @@ My workflow is basically to keep the main branch clean, rebase feature branches 
 
 If each conversation is also given some dedicated skills, it starts to feel a bit like agents. But I do not want to make it sound mystical. For code development, simply making different conversations responsible for different roles already solves many problems.
 
-## 6. Code Quality and Refactoring: Tests Became How I Decided Whether It Was Safe to Continue
+## Code Quality and Refactoring: Tests Became How I Decided Whether It Was Safe to Continue
 
 After using Codex, it became hard for me to review every generated line one by one. Not because I did not want to, but because it was not realistic. AI generates code too fast. Once the project becomes complex, human line-by-line review quickly falls behind.
 
@@ -196,7 +196,7 @@ In the end, I had to point out issues one directory at a time and let Codex make
 
 My view on AI refactoring has become more conservative since then: it is very good at splitting files, extracting types, and organizing modules, but only if I first define what "not broken" means. Without tests, boundaries, and a small-step rhythm, refactoring can easily become another disaster.
 
-## 7. UI Prototyping: Mock-First Was One of the Better Choices
+## UI Prototyping: Mock-First Was One of the Better Choices
 
 After the Python and Go parts were completed, UI was what worried me most, because I had almost no experience building a complete desktop UI.
 
@@ -218,7 +218,7 @@ If the UI had connected to the real daemon from the beginning, problems would ha
 
 So if I build a similar project again, I will probably still mock first. Even if part of the backend is already available, I would rather smooth out the user flow with mocks first, then gradually replace them with real implementation.
 
-## 8. QA and Open Source Cleanup: The Last Mile Takes the Most Time
+## QA and Open Source Cleanup: The Last Mile Takes the Most Time
 
 After connecting the real daemon worker, the project entered the stage where I spent the most time.
 
@@ -253,7 +253,7 @@ I underestimated this step at first. For developers, working code can feel like 
 
 Fast Sub is also local-first, so the privacy boundary has to be explicit. Remote providers must not become implicit behavior. I want any path that uploads audio or subtitle text to be explicitly selected and confirmed by the user.
 
-## 9. Pitfalls I Hit: Complexity Does Not Disappear, It Only Moves
+## Pitfalls I Hit: Complexity Does Not Disappear, It Only Moves
 
 If I compress this experience into a few pitfalls, they would be these.
 
@@ -271,7 +271,7 @@ Behind all these pitfalls is the same issue: complexity does not disappear, it o
 
 AI can help me write code faster, but it cannot make complexity vanish. Problems I do not handle early will still appear later during implementation, QA, or real usage.
 
-## 10. If I Did It Again, What I Would Do Earlier
+## If I Did It Again, What I Would Do Earlier
 
 If I were to build Fast Sub again from scratch now, I would not overturn the overall path, but there are several things I would do earlier.
 
@@ -287,7 +287,7 @@ Fifth, separate feature work, refactoring, and release work more strictly in eve
 
 None of these are flashy tricks, but if I had done them earlier, I probably would have carried less debt.
 
-## 11. Conclusion: After This, I Trust Magic Prompts Less
+## Conclusion: After This, I Trust Magic Prompts Less
 
 After building this project with Codex, my view of AI coding changed quite a bit.
 
